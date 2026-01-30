@@ -1,0 +1,7 @@
+[gd_scene format=3 uid="uid://blfxxb66ypa2d"]
+
+[ext_resource type="PackedScene" uid="uid://buli0jmq1ctia" path="res://ballroom.tscn" id="1_ig7tw"]
+
+[node name="Main" type="Node3D" unique_id=69639745]
+
+[node name="Ballroom" parent="." unique_id=2105781102 instance=ExtResource("1_ig7tw")]

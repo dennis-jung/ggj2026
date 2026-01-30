@@ -1,0 +1,7 @@
+[gd_scene format=3 uid="uid://buli0jmq1ctia"]
+
+[ext_resource type="PackedScene" uid="uid://kadii7okwoau" path="res://assets/Ballroom.glb" id="1_ka2bo"]
+[ext_resource type="Script" uid="uid://bvhs3fdkqhstg" path="res://ballroom.gd" id="2_oc5d6"]
+
+[node name="Ballroom" unique_id=2105781102 instance=ExtResource("1_ka2bo")]
+script = ExtResource("2_oc5d6")
