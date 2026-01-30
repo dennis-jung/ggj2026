@@ -3,5 +3,17 @@
 [ext_resource type="PackedScene" uid="uid://kadii7okwoau" path="res://assets/Ballroom.glb" id="1_ka2bo"]
 [ext_resource type="Script" uid="uid://bvhs3fdkqhstg" path="res://ballroom.gd" id="2_oc5d6"]
 
-[node name="Ballroom" unique_id=290959982 instance=ExtResource("1_ka2bo")]
+[node name="Ballroom" unique_id=1105701382 instance=ExtResource("1_ka2bo")]
 script = ExtResource("2_oc5d6")
+
+[node name="Wall03" parent="." index="0" unique_id=1271151824]
+visible = false
+
+[node name="Wall02" parent="." index="1" unique_id=848486626]
+visible = false
+
+[node name="Wall01" parent="." index="2" unique_id=657440371]
+visible = false
+
+[node name="Wall00" parent="." index="3" unique_id=536830572]
+visible = false

@@ -1,0 +1,7 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://bivhjpwh7onvq"]
+
+[ext_resource type="Texture2D" uid="uid://x3kvmi88hhiq" path="res://assets/Characters/WolfLadyBack.png" id="1_jwefi"]
+
+[resource]
+albedo_texture = ExtResource("1_jwefi")
+texture_filter = 0

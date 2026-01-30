@@ -2,6 +2,8 @@
 
 [ext_resource type="Script" uid="uid://ca3d060o4l3vc" path="res://main.gd" id="1_0xm2m"]
 [ext_resource type="PackedScene" uid="uid://buli0jmq1ctia" path="res://ballroom.tscn" id="1_ig7tw"]
+[ext_resource type="ArrayMesh" uid="uid://dlqk51cep57f8" path="res://assets/Characters/wolf_lady_mesh.tres" id="3_1bvp3"]
+[ext_resource type="Material" uid="uid://gauyip4u8vx2" path="res://assets/Characters/wolf_lady_material_3d.tres" id="4_lquwl"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_0xm2m"]
 sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
@@ -19,6 +21,10 @@ glow_enabled = true
 [node name="Main" type="Node3D" unique_id=69639745]
 script = ExtResource("1_0xm2m")
 
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=1515158422]
+transform = Transform3D(-0.8660254, -0.43301278, 0.25, 0, 0.49999997, 0.86602545, -0.50000006, 0.75, -0.43301266, 0, 0, 0)
+shadow_enabled = true
+
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=440934493]
 environment = SubResource("Environment_1bvp3")
 
@@ -27,5 +33,17 @@ environment = SubResource("Environment_1bvp3")
 [node name="CameraPivot" type="Node3D" parent="." unique_id=721909920]
 
 [node name="Camera3D" type="Camera3D" parent="CameraPivot" unique_id=46934887]
-transform = Transform3D(1, 0, 0, 0, 0.9862106, 0.16549516, 0, -0.16549516, 0.9862106, 0, 15, 20)
+transform = Transform3D(1, 0, 0, 0, 0.9862106, 0.16549516, 0, -0.16549516, 0.9862106, 0, 14.973859, 24.844223)
+fov = 60.0
 size = 20.0
+
+[node name="CameraTarget" type="Node3D" parent="CameraPivot" unique_id=1447353489]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -8.8165245)
+
+[node name="WolfLady" type="Node3D" parent="." unique_id=1738052655]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.62099254, 0)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="WolfLady" unique_id=32734089]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.153903, 0)
+mesh = ExtResource("3_1bvp3")
+surface_material_override/0 = ExtResource("4_lquwl")
