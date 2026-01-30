@@ -24,5 +24,8 @@ environment = SubResource("Environment_1bvp3")
 
 [node name="Ballroom" parent="." unique_id=290959982 instance=ExtResource("1_ig7tw")]
 
-[node name="Camera3D" type="Camera3D" parent="." unique_id=46934887]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 25, 25)
+[node name="CameraPivot" type="Node3D" parent="." unique_id=721909920]
+
+[node name="Camera3D" type="Camera3D" parent="CameraPivot" unique_id=46934887]
+transform = Transform3D(1, 0, 0, 0, 0.9862106, 0.16549516, 0, -0.16549516, 0.9862106, 0, 15, 20)
+size = 20.0

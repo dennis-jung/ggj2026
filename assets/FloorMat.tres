@@ -1,0 +1,14 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://tm0iq62goqnf"]
+
+[ext_resource type="Texture2D" uid="uid://go2vaiquiiih" path="res://assets/Ballroom_Tiles1_Color.png" id="1_qwbc5"]
+[ext_resource type="Texture2D" uid="uid://dh7m0csr0u5wd" path="res://assets/Ballroom_Tiles1_Normal.png" id="2_7foc5"]
+
+[resource]
+resource_name = "FloorMat"
+cull_mode = 2
+albedo_texture = ExtResource("1_qwbc5")
+roughness = 0.5
+normal_enabled = true
+normal_texture = ExtResource("2_7foc5")
+uv1_scale = Vector3(5, 5, 1)
+uv1_offset = Vector3(0, -4, 0)
