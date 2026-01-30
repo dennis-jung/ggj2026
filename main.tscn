@@ -1,7 +1,28 @@
 [gd_scene format=3 uid="uid://blfxxb66ypa2d"]
 
+[ext_resource type="Script" uid="uid://ca3d060o4l3vc" path="res://main.gd" id="1_0xm2m"]
 [ext_resource type="PackedScene" uid="uid://buli0jmq1ctia" path="res://ballroom.tscn" id="1_ig7tw"]
 
-[node name="Main" type="Node3D" unique_id=69639745]
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_0xm2m"]
+sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
+ground_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
 
-[node name="Ballroom" parent="." unique_id=2105781102 instance=ExtResource("1_ig7tw")]
+[sub_resource type="Sky" id="Sky_h2yge"]
+sky_material = SubResource("ProceduralSkyMaterial_0xm2m")
+
+[sub_resource type="Environment" id="Environment_1bvp3"]
+background_mode = 2
+sky = SubResource("Sky_h2yge")
+tonemap_mode = 2
+glow_enabled = true
+
+[node name="Main" type="Node3D" unique_id=69639745]
+script = ExtResource("1_0xm2m")
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=440934493]
+environment = SubResource("Environment_1bvp3")
+
+[node name="Ballroom" parent="." unique_id=290959982 instance=ExtResource("1_ig7tw")]
+
+[node name="Camera3D" type="Camera3D" parent="." unique_id=46934887]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 25, 25)

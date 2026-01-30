@@ -1,29 +1,31 @@
 extends Node3D
+class_name Ballroom
 
 @onready var wallEast : MeshInstance3D = $Wall00
 @onready var wallNorth : MeshInstance3D = $Wall01
 @onready var wallWest : MeshInstance3D = $Wall02
 @onready var wallSouth : MeshInstance3D = $Wall03
 
-func SetWallVisibility(direction):
+func set_wall_visibility(direction):
 	match direction:
 		"southeast":
-			wallSouth.visible = false
-			wallEast.visible = false
-			wallNorth.visible = true
-			wallWest.visible = true
+			wallSouth.hide()
+			wallEast.hide()
+			wallNorth.show()
+			wallWest.show()
 		"northeast":
-			wallSouth.visible = true
-			wallEast.visible = false
-			wallNorth.visible = false
-			wallWest.visible = true
+			wallSouth.show()
+			wallEast.hide()
+			wallNorth.hide()
+			wallWest.show()
 		"northwest":
-			wallSouth.visible = true
-			wallEast.visible = true
-			wallNorth.visible = false
-			wallWest.visible = false
+			wallSouth.show()
+			wallEast.show()
+			wallNorth.hide()
+			wallWest.hide()
 		"southwest":
-			wallSouth.visible = false
-			wallEast.visible = true
-			wallNorth.visible = false
-			wallWest.visible = true
+			wallSouth.hide()
+			wallEast.show()
+			wallNorth.show()
+			wallWest.hide()
+	#print("Wall visibility: %s/%s/%s/%s", wallSouth.vivible, wallEast.visible, wallNorth.visible, wallWest.visible)
