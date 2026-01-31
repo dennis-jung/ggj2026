@@ -67,7 +67,7 @@ func add_guests() -> void:
 		var x := randf_range(-9.0, 9.0)
 		var z := randf_range(-9.0, 9.0)
 		var rot := deg_to_rad(randf_range(0.0, 360.0))
-		npc.name = "WolfLady_" + str(i)
+		npc.name = npc.name + "_" + str(i)
 		guests_node.add_child(npc)
 		npc.rotation.y = rot
 		npc.global_position = Vector3(x, 0.6, z)
