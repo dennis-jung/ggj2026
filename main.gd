@@ -28,10 +28,6 @@ func _input(event: InputEvent) -> void:
 	if event.is_action_pressed("rotate_right"):
 		current_rotation_target = current_rotation_target - deg_to_rad(90.0)
 		rotate_camera()
-	if event.is_action("zoom_in"):
-		camera.translate_object_local(Vector3(0.0, 0.0, -1.0))
-	if event.is_action("zoom_out"):
-		camera.translate_object_local(Vector3(0.0, 0.0, +1.0))
 	if event is InputEventMouseButton and event.pressed and event.button_index == MOUSE_BUTTON_LEFT:
 		var result = camera.perform_raycast()
 		if result:

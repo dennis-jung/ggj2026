@@ -22,6 +22,10 @@ _limits = [0.0, 1.0, -1.0, 1.0]
 _data = [Vector2(0, 1), 0.0, -0.5045797, 0, 0, Vector2(0.12455511, 0.8951612), -2.3691318, -2.3691318, 0, 0, Vector2(0.41637015, 0.06598234), -1.1082009, -1.1082009, 0, 0, Vector2(0.6085409, 0), 0.0, 0.0, 0, 0, Vector2(1, 0), 0.0, 0.0, 0, 0]
 point_count = 5
 
+[sub_resource type="Curve" id="Curve_1bvp3"]
+_data = [Vector2(0, 0), 0.0, 0.0, 0, 0, Vector2(0.72490704, 0.42647052), 1.886457, 1.886457, 0, 0, Vector2(1, 1), 0.0, 0.0, 0, 0]
+point_count = 3
+
 [node name="Main" type="Node3D" unique_id=69639745 groups=["npcs"]]
 script = ExtResource("1_0xm2m")
 
@@ -42,8 +46,10 @@ transform = Transform3D(1, 0, 0, 0, 0.9862106, 0.16549516, 0, -0.16549516, 0.986
 fov = 60.0
 size = 20.0
 script = ExtResource("3_5vw27")
+max_zoom_dist = 25.0
+height_curve = SubResource("Curve_1bvp3")
 
-[node name="CameraTarget" type="Node3D" parent="CameraPivot" unique_id=1447353489]
+[node name="CameraTarget" type="Marker3D" parent="CameraPivot" unique_id=944988992]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -8.8165245)
 
 [node name="Guests" type="Node3D" parent="." unique_id=518338895]
