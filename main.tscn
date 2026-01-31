@@ -17,6 +17,11 @@ sky = SubResource("Sky_h2yge")
 tonemap_mode = 2
 glow_enabled = true
 
+[sub_resource type="Curve" id="Curve_h2yge"]
+_limits = [0.0, 1.0, -1.0, 1.0]
+_data = [Vector2(0, 1), 0.0, -0.5045797, 0, 0, Vector2(0.12455511, 0.8951612), -2.3691318, -2.3691318, 0, 0, Vector2(0.41637015, 0.06598234), -1.1082009, -1.1082009, 0, 0, Vector2(0.6085409, 0), 0.0, 0.0, 0, 0, Vector2(1, 0), 0.0, 0.0, 0, 0]
+point_count = 5
+
 [node name="Main" type="Node3D" unique_id=69639745 groups=["npcs"]]
 script = ExtResource("1_0xm2m")
 
@@ -27,7 +32,8 @@ shadow_enabled = true
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=440934493]
 environment = SubResource("Environment_1bvp3")
 
-[node name="Ballroom" parent="." unique_id=290959982 instance=ExtResource("1_ig7tw")]
+[node name="Ballroom" parent="." unique_id=1105701382 instance=ExtResource("1_ig7tw")]
+transparency_curve = SubResource("Curve_h2yge")
 
 [node name="CameraPivot" type="Node3D" parent="." unique_id=721909920]
 

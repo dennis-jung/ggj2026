@@ -1,77 +1,42 @@
 extends Node3D
-class_name Ballroom
 
-@export var transparency_zone : float = 15.0
-
-@onready var wallEast : MeshInstance3D = $Wall00
-@onready var wallNorth : MeshInstance3D = $Wall01
-@onready var wallWest : MeshInstance3D = $Wall02
-@onready var wallSouth : MeshInstance3D = $Wall03
+@export var transparency_curve: Curve
+@export var room_center: Vector3 = Vector3.ZERO
 
 func _ready() -> void:
-	wallEast.show()
-	wallNorth.show()
-	wallWest.show()
-	wallSouth.show()
+		for child in get_children():
+			if child.has_method("show"):
+				child.show()
 
-func set_wall_visibility(rotation_y : float) -> void:
-	var clamped_rotation_deg : int  = int(rad_to_deg(rotation_y)) % 360
-	if (clamped_rotation_deg < 0):
-		clamped_rotation_deg = clamped_rotation_deg + 360
-		
-	# south wall
-	if (clamped_rotation_deg >= 135.0 - transparency_zone and clamped_rotation_deg <= 225.0 + transparency_zone):
-		wallSouth.transparency = 0.0
-		#print("transparency = ", 0.0, " @ ", clamped_rotation_deg, " deg")
-	elif (clamped_rotation_deg <= 45.0 + transparency_zone or clamped_rotation_deg >= 315.0 - transparency_zone):
-		wallSouth.transparency = 1.0
-		#print("transparency = ", 1.0, " @ ", clamped_rotation_deg, " deg")
-	elif (clamped_rotation_deg < 135.0):
-		wallSouth.transparency = calculate_transparency(clamped_rotation_deg, 135.0 - transparency_zone, 45.0 + transparency_zone)
-		print("south wall transparency: ", wallSouth.transparency)
-	else:
-		wallSouth.transparency = calculate_transparency(clamped_rotation_deg, 225.0 + transparency_zone, 315.0 - transparency_zone)
-		print("south wall transparency: ", wallSouth.transparency)
-	
-	# east wall
-	if (clamped_rotation_deg >= 225.0 - transparency_zone and clamped_rotation_deg <= 315.0 + transparency_zone):
-		wallEast.transparency = 0.0
-		#print("transparency = ", 0.0, " @ ", clamped_rotation_deg, " deg")
-	elif (clamped_rotation_deg <= 135.0 + transparency_zone):
-		wallEast.transparency = 1.0
-		#print("transparency = ", 1.0, " @ ", clamped_rotation_deg, " deg")
-	else:
-		wallEast.transparency = calculate_transparency(clamped_rotation_deg, 225.0 - transparency_zone, 135 + transparency_zone)
-		print("east wall transparency: ", wallEast.transparency)
+func _process(_delta: float) -> void:
+	var camera = get_viewport().get_camera_3d()
+	if not camera: 
+		return
 
-	# north wall
-	if (clamped_rotation_deg >= 135.0 - transparency_zone and clamped_rotation_deg <= 225.0 + transparency_zone):
-		wallNorth.transparency = 1.0
-		#print("transparency = ", 0.0, " @ ", clamped_rotation_deg, " deg")
-	elif (clamped_rotation_deg <= 45.0 + transparency_zone or clamped_rotation_deg >= 315.0 - transparency_zone):
-		wallNorth.transparency = 0.0
-		#print("transparency = ", 1.0, " @ ", clamped_rotation_deg, " deg")
-	elif (clamped_rotation_deg < 135.0):
-		wallNorth.transparency = calculate_transparency(clamped_rotation_deg, 45.0 + transparency_zone, 135.0 - transparency_zone)
-		print("north wall transparency: ", wallNorth.transparency)
-	else:
-		wallNorth.transparency = calculate_transparency(clamped_rotation_deg, 315.0 - transparency_zone, 225.0 + transparency_zone)
-		print("north wall transparency: ", wallNorth.transparency)
-	
-	# west wall
-	if (clamped_rotation_deg >= 225.0 - transparency_zone and clamped_rotation_deg <= 315.0 + transparency_zone):
-		wallWest.transparency = 1.0
-		#print("transparency = ", 0.0, " @ ", clamped_rotation_deg, " deg")
-	elif (clamped_rotation_deg <= 135.0 + transparency_zone):
-		wallWest.transparency = 0.0
-		#print("transparency = ", 1.0, " @ ", clamped_rotation_deg, " deg")
-	else:
-		wallWest.transparency = calculate_transparency(clamped_rotation_deg, 135 + transparency_zone, 225.0 - transparency_zone)
-		print("west wall transparency: ", wallWest.transparency)
+	var cam_dir = (camera.global_position - room_center)
+	cam_dir.y = 0
+	cam_dir = cam_dir.normalized()
 
+	for child in get_children():
+		if child is MeshInstance3D:
+			var wall_dir = (child.global_position - room_center)
+			wall_dir.y = 0
+			wall_dir = wall_dir.normalized()
+			var dot = wall_dir.dot(cam_dir)
+			var alpha = transparency_curve.sample(clamp(dot, 0.0, 1.0))
+			update_wall_transparency(child, alpha)
 
-func calculate_transparency(current : float, from : float, to : float) -> float:
-	var delta : float = abs(to - from)
-	var ratio : float = abs ((current - from) / delta)
-	return ratio
-	
+func update_wall_transparency(mesh: MeshInstance3D, alpha: float) -> void:
+	var mat = mesh.get_surface_override_material(0) as StandardMaterial3D
+	if not mat:
+		var original_mat = mesh.get_active_material(0)
+		if original_mat:
+			mat = original_mat.duplicate()
+			mesh.set_surface_override_material(0, mat)
+	if mat:
+		if not is_equal_approx(mat.albedo_color.a, alpha):
+			mat.albedo_color.a = alpha
+			if alpha >= 1.0:
+				mat.transparency = BaseMaterial3D.TRANSPARENCY_DISABLED
+			else:
+				mat.transparency = BaseMaterial3D.TRANSPARENCY_ALPHA

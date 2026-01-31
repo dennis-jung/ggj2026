@@ -1,6 +1,5 @@
 extends Node3D
 
-@onready var ballroom : Ballroom = $Ballroom
 @onready var camera_pivot : Node3D = $CameraPivot
 @onready var camera : GameCamera = $CameraPivot/Camera3D
 @onready var cameraTarget : Node3D = $CameraPivot/CameraTarget
@@ -41,9 +40,6 @@ func _input(event: InputEvent) -> void:
 			selected_body = hit_object
 			if (hit_object.has_method("select")):
 				hit_object.select()
-
-func _process(_delta: float) -> void:
-	ballroom.set_wall_visibility(camera_pivot.rotation.y)
 
 func rotate_camera() -> void:
 	is_rotating = true
