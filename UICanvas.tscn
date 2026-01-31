@@ -1,0 +1,48 @@
+[gd_scene format=3 uid="uid://cvb7oai2gic3m"]
+
+[ext_resource type="Script" uid="uid://c1plojv4cgt4e" path="res://ui_canvas.gd" id="1_cd8a1"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_h2yge"]
+font_size = 24
+
+[node name="CanvasLayer" type="CanvasLayer" unique_id=863748369]
+script = ExtResource("1_cd8a1")
+
+[node name="BottomTextBox" type="Control" parent="." unique_id=1393283460]
+visible = false
+layout_mode = 3
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -154.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="ColorRect" type="ColorRect" parent="BottomTextBox" unique_id=1517112480]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.5568628)
+
+[node name="MarginContainer" type="MarginContainer" parent="BottomTextBox" unique_id=1895728613]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 20
+
+[node name="Label" type="Label" parent="BottomTextBox/MarginContainer" unique_id=622048277]
+custom_minimum_size = Vector2(1000, 100)
+layout_mode = 2
+text = "Mauris placerat facilisis turpis sit amet luctus. Aliquam sed urna at purus sodales vulputate et eget metus. Sed rutrum ex at vehicula blandit. Pellentesque dignissim egestas auctor. Quisque in dapibus leo. Fusce rutrum metus et leo laoreet ullamcorper."
+label_settings = SubResource("LabelSettings_h2yge")
+autowrap_mode = 2

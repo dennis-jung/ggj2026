@@ -4,12 +4,11 @@ extends Node3D
 @onready var camera : GameCamera = $CameraPivot/Camera3D
 @onready var cameraTarget : Node3D = $CameraPivot/CameraTarget
 @onready var guests_node : Node3D = $Guests
+@onready var ui: UICanvas = $UI
 
 var npc_wolf_lady = preload("res://assets/Characters/wolf_lady.tscn")
 var npc_lady_wolf = preload("res://assets/Characters/lady_wolf.tscn")
 var npc_tuxed_man = preload("res://assets/Characters/tuxedo_man.tscn")
-
-var selected_npc : Npc
 
 var rotation_tween : Tween = null
 var current_rotation_target : float = 0.0
@@ -31,14 +30,15 @@ func _input(event: InputEvent) -> void:
 	if event is InputEventMouseButton and event.pressed and event.button_index == MOUSE_BUTTON_LEFT:
 		var result = camera.perform_raycast()
 		if result:
-			var hit_object = result.collider as Npc
-			print("Clicked on: ", hit_object.name, " [", result.collider_id, "]")
-			if (selected_npc):
-				if (selected_npc.has_method("deselect")):
-					selected_npc.deselect()
-			selected_npc = hit_object
-			if (hit_object.has_method("select")):
-				hit_object.select()
+			var npc = result.collider as Npc
+			if npc:
+				print("Clicked on: ", npc.name, " [", result.collider_id, "]")
+				ui.show_bottom_text_box("You clicked on NPC " + npc.name)
+				npc.toggle_select()
+		else:
+			print("Clicked away")
+			get_tree().call_group("npcs", "deselect")
+			ui.hide_bottom_text_box()
 
 func rotate_camera() -> void:
 	is_rotating = true
@@ -60,8 +60,8 @@ func add_guests() -> void:
 			npc = npc_lady_wolf.instantiate()
 		else:
 			npc = npc_tuxed_man.instantiate()
-		var x := randf_range(-9.0, 9.0)
-		var z := randf_range(-9.0, 9.0)
+		var x := randf_range(-8.5, 8.5)
+		var z := randf_range(-8.5, 8.5)
 		var rot := deg_to_rad(randf_range(0.0, 360.0))
 		npc.name = npc.name + "_" + str(i)
 		guests_node.add_child(npc)

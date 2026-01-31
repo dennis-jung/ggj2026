@@ -14,3 +14,14 @@ func select():
 func deselect():
 	var material = meshFront.material_overlay as StandardMaterial3D
 	material.grow_amount = 0.0
+
+func toggle_select():
+	if is_selected():
+		deselect()
+	else:
+		select()
+
+func is_selected() -> bool:
+	var material = meshFront.material_overlay as StandardMaterial3D
+	return material.grow_amount != 0.0
+	
