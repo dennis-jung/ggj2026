@@ -1,0 +1,27 @@
+[gd_scene format=3 uid="uid://buli0jmq1ctia"]
+
+[ext_resource type="PackedScene" uid="uid://kadii7okwoau" path="res://assets/environment/ballroom/Ballroom.glb" id="1_ka2bo"]
+[ext_resource type="Script" uid="uid://bvhs3fdkqhstg" path="res://assets/environment/ballroom/ballroom.gd" id="2_oc5d6"]
+[ext_resource type="Material" uid="uid://da8kp14ix4hdc" path="res://assets/environment/ballroom/Material_Wall3.tres" id="3_i0fru"]
+[ext_resource type="Material" uid="uid://di3xk42p3wd6e" path="res://assets/environment/ballroom/Material_Wall2.tres" id="4_2klin"]
+[ext_resource type="Material" uid="uid://bl7v7dvpdugqs" path="res://assets/environment/ballroom/Material_Wall1.tres" id="5_6leix"]
+[ext_resource type="Material" uid="uid://beif5m2l8vvn8" path="res://assets/environment/ballroom/Material_Wall0.tres" id="6_7fp0k"]
+
+[node name="Ballroom" unique_id=878212460 instance=ExtResource("1_ka2bo")]
+script = ExtResource("2_oc5d6")
+
+[node name="Wall03" parent="." index="0" unique_id=490368736]
+visible = false
+surface_material_override/0 = ExtResource("3_i0fru")
+
+[node name="Wall02" parent="." index="1" unique_id=378701184]
+visible = false
+surface_material_override/0 = ExtResource("4_2klin")
+
+[node name="Wall01" parent="." index="2" unique_id=682622393]
+visible = false
+surface_material_override/0 = ExtResource("5_6leix")
+
+[node name="Wall00" parent="." index="3" unique_id=879245127]
+visible = false
+surface_material_override/0 = ExtResource("6_7fp0k")

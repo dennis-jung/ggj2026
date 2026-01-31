@@ -1,6 +1,6 @@
 [gd_resource type="StandardMaterial3D" format=3 uid="uid://s3hml0ixrvqg"]
 
-[ext_resource type="Texture2D" uid="uid://ddxd53cfuulhh" path="res://assets/Characters/Tuxedo-Man_back.png" id="1_ntdfh"]
+[ext_resource type="Texture2D" uid="uid://ddxd53cfuulhh" path="res://assets/characters/tuxedo_man/Tuxedo-Man_back.png" id="1_ntdfh"]
 
 [resource]
 albedo_texture = ExtResource("1_ntdfh")

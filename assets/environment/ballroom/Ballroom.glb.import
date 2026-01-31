@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://kadii7okwoau"
-path="res://.godot/imported/Ballroom.glb-bdc30ab991493cf08a40fad4595edbbd.scn"
+path="res://.godot/imported/Ballroom.glb-afe9e73a5d6c07147940c951e03d9abf.scn"
 
 [deps]
 
-source_file="res://assets/Ballroom.glb"
-dest_files=["res://.godot/imported/Ballroom.glb-bdc30ab991493cf08a40fad4595edbbd.scn"]
+source_file="res://assets/environment/ballroom/Ballroom.glb"
+dest_files=["res://.godot/imported/Ballroom.glb-afe9e73a5d6c07147940c951e03d9abf.scn"]
 
 [params]
 
@@ -41,27 +41,27 @@ _subresources={
 "materials": {
 "FloorMat": {
 "use_external/enabled": true,
-"use_external/fallback_path": "res://assets/FloorMat.tres",
+"use_external/fallback_path": "res://assets/environment/ballroom/FloorMat.tres",
 "use_external/path": "uid://tm0iq62goqnf"
 },
 "Material_Wall0": {
 "use_external/enabled": true,
-"use_external/fallback_path": "res://assets/Material_Wall0.tres",
+"use_external/fallback_path": "res://assets/environment/ballroom/Material_Wall0.tres",
 "use_external/path": "uid://beif5m2l8vvn8"
 },
 "Material_Wall1": {
 "use_external/enabled": true,
-"use_external/fallback_path": "res://assets/Material_Wall1.tres",
+"use_external/fallback_path": "res://assets/environment/ballroom/Material_Wall1.tres",
 "use_external/path": "uid://bl7v7dvpdugqs"
 },
 "Material_Wall2": {
 "use_external/enabled": true,
-"use_external/fallback_path": "res://assets/Material_Wall2.tres",
+"use_external/fallback_path": "res://assets/environment/ballroom/Material_Wall2.tres",
 "use_external/path": "uid://di3xk42p3wd6e"
 },
 "Material_Wall3": {
 "use_external/enabled": true,
-"use_external/fallback_path": "res://assets/Material_Wall3.tres",
+"use_external/fallback_path": "res://assets/environment/ballroom/Material_Wall3.tres",
 "use_external/path": "uid://da8kp14ix4hdc"
 }
 }

@@ -48,7 +48,7 @@ func _process(_delta: float):
 		
 		# Shift target towards the camera's side of the room as we zoom in
 		var target_offset = flattened_cam_dir * (current_zoom_ratio * max_target_offset)
-		var dynamic_look_at = room_center + target_offset
+		var dynamic_look_at = room_center #+ target_offset
 		
 		look_at(dynamic_look_at)
 

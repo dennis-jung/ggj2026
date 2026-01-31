@@ -1,7 +1,7 @@
 [gd_resource type="StandardMaterial3D" format=3 uid="uid://tm0iq62goqnf"]
 
-[ext_resource type="Texture2D" uid="uid://go2vaiquiiih" path="res://assets/Ballroom_Tiles1_Color.png" id="1_qwbc5"]
-[ext_resource type="Texture2D" uid="uid://dh7m0csr0u5wd" path="res://assets/Ballroom_Tiles1_Normal.png" id="2_7foc5"]
+[ext_resource type="Texture2D" uid="uid://go2vaiquiiih" path="res://assets/environment/ballroom/Ballroom_Tiles1_Color.png" id="1_qwbc5"]
+[ext_resource type="Texture2D" uid="uid://dh7m0csr0u5wd" path="res://assets/environment/ballroom/Ballroom_Tiles1_Normal.png" id="2_7foc5"]
 
 [resource]
 resource_name = "FloorMat"

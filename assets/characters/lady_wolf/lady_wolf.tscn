@@ -1,10 +1,10 @@
 [gd_scene format=3 uid="uid://djbqy1trx2uxm"]
 
-[ext_resource type="Script" uid="uid://oyms4u2gt1wl" path="res://assets/Characters/npc.gd" id="1_jypgk"]
-[ext_resource type="ArrayMesh" uid="uid://bui27yq5mktvb" path="res://assets/Characters/lady_wolf_front_mesh.tres" id="2_jypgk"]
-[ext_resource type="Material" uid="uid://dgmo1b0piunwc" path="res://assets/Characters/lady_wolf_front_material.tres" id="3_pyfsh"]
-[ext_resource type="ArrayMesh" uid="uid://bwtbu7hp7smlt" path="res://assets/Characters/lady_wolf_back_mesh.tres" id="4_a2lii"]
-[ext_resource type="Material" uid="uid://dx7bbtq2gf7xm" path="res://assets/Characters/lady_wolf_back_material.tres" id="5_2eu5j"]
+[ext_resource type="Script" uid="uid://oyms4u2gt1wl" path="res://assets/characters/npc.gd" id="1_jypgk"]
+[ext_resource type="ArrayMesh" uid="uid://bui27yq5mktvb" path="res://assets/characters/lady_wolf/lady_wolf_front_mesh.tres" id="2_jypgk"]
+[ext_resource type="Material" uid="uid://dgmo1b0piunwc" path="res://assets/characters/lady_wolf/lady_wolf_front_material.tres" id="3_pyfsh"]
+[ext_resource type="ArrayMesh" uid="uid://bwtbu7hp7smlt" path="res://assets/characters/lady_wolf/lady_wolf_back_mesh.tres" id="4_a2lii"]
+[ext_resource type="Material" uid="uid://dx7bbtq2gf7xm" path="res://assets/characters/lady_wolf/lady_wolf_back_material.tres" id="5_2eu5j"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_geudx"]
 cull_mode = 1

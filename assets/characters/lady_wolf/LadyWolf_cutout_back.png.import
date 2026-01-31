@@ -2,8 +2,8 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://coegouswwan6d"
-path.s3tc="res://.godot/imported/LadyWolf_cutout_front.png-3603616576fede542441079108351e37.s3tc.ctex"
+uid="uid://chpwtpesrr2wr"
+path.s3tc="res://.godot/imported/LadyWolf_cutout_back.png-d30a15e9e991ea0ac895805a5fefc507.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://assets/Characters/LadyWolf_cutout_front.png"
-dest_files=["res://.godot/imported/LadyWolf_cutout_front.png-3603616576fede542441079108351e37.s3tc.ctex"]
+source_file="res://assets/characters/lady_wolf/LadyWolf_cutout_back.png"
+dest_files=["res://.godot/imported/LadyWolf_cutout_back.png-d30a15e9e991ea0ac895805a5fefc507.s3tc.ctex"]
 
 [params]
 

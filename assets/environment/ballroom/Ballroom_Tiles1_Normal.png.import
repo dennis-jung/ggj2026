@@ -2,17 +2,20 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://x3kvmi88hhiq"
-path.s3tc="res://.godot/imported/WolfLadyBack.png-bdf894352cbdcc0fd7b8a25221de5de2.s3tc.ctex"
+uid="uid://dh7m0csr0u5wd"
+path.s3tc="res://.godot/imported/Ballroom_Tiles1_Normal.png-3a04a46dad94dd6b7d9bc7512c3694e4.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
 }
+generator_parameters={
+"md5": "7416c47dbdbdb143a1ade8d709720a20"
+}
 
 [deps]
 
-source_file="res://assets/Characters/WolfLadyBack.png"
-dest_files=["res://.godot/imported/WolfLadyBack.png-bdf894352cbdcc0fd7b8a25221de5de2.s3tc.ctex"]
+source_file="res://assets/environment/ballroom/Ballroom_Tiles1_Normal.png"
+dest_files=["res://.godot/imported/Ballroom_Tiles1_Normal.png-3a04a46dad94dd6b7d9bc7512c3694e4.s3tc.ctex"]
 
 [params]
 
@@ -22,12 +25,12 @@ compress/lossy_quality=0.7
 compress/uastc_level=0
 compress/rdo_quality_loss=0.0
 compress/hdr_compression=1
-compress/normal_map=0
+compress/normal_map=1
 compress/channel_pack=0
 mipmaps/generate=true
 mipmaps/limit=-1
-roughness/mode=0
-roughness/src_normal=""
+roughness/mode=1
+roughness/src_normal="res://assets/Ballroom_Tiles1_Normal.png"
 process/channel_remap/red=0
 process/channel_remap/green=1
 process/channel_remap/blue=2

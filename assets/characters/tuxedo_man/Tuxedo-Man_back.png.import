@@ -2,20 +2,17 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://go2vaiquiiih"
-path.s3tc="res://.godot/imported/Ballroom_Tiles1_Color.png-40c020c4472116d977b2c84eb69546dd.s3tc.ctex"
+uid="uid://ddxd53cfuulhh"
+path.s3tc="res://.godot/imported/Tuxedo-Man_back.png-d67ef252fc3c811847f7a6eb92ce7f99.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
 }
-generator_parameters={
-"md5": "f792e04fbd0ba9a2213b0fddb7a8b476"
-}
 
 [deps]
 
-source_file="res://assets/Ballroom_Tiles1_Color.png"
-dest_files=["res://.godot/imported/Ballroom_Tiles1_Color.png-40c020c4472116d977b2c84eb69546dd.s3tc.ctex"]
+source_file="res://assets/characters/tuxedo_man/Tuxedo-Man_back.png"
+dest_files=["res://.godot/imported/Tuxedo-Man_back.png-d67ef252fc3c811847f7a6eb92ce7f99.s3tc.ctex"]
 
 [params]
 

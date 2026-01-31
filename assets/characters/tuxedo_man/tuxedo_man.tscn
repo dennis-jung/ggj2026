@@ -1,10 +1,10 @@
 [gd_scene format=3 uid="uid://cdua1ydqemhnl"]
 
-[ext_resource type="Script" uid="uid://oyms4u2gt1wl" path="res://assets/Characters/npc.gd" id="1_88ens"]
-[ext_resource type="ArrayMesh" uid="uid://cgah1j741eks8" path="res://assets/Characters/tuxedo_man_front_mesh.tres" id="2_88ens"]
-[ext_resource type="Material" uid="uid://b8jdxesj7a0b0" path="res://assets/Characters/tuxedo_man_front_material.tres" id="3_af6pm"]
-[ext_resource type="ArrayMesh" uid="uid://d1mlmbftc5rww" path="res://assets/Characters/tuxedo_man_back_mesh.tres" id="4_0o3ak"]
-[ext_resource type="Material" uid="uid://s3hml0ixrvqg" path="res://assets/Characters/tuxedo_man_back_material.tres" id="5_yodb1"]
+[ext_resource type="Script" uid="uid://oyms4u2gt1wl" path="res://assets/characters/npc.gd" id="1_88ens"]
+[ext_resource type="ArrayMesh" uid="uid://cgah1j741eks8" path="res://assets/characters/tuxedo_man/tuxedo_man_front_mesh.tres" id="2_88ens"]
+[ext_resource type="Material" uid="uid://b8jdxesj7a0b0" path="res://assets/characters/tuxedo_man/tuxedo_man_front_material.tres" id="3_af6pm"]
+[ext_resource type="ArrayMesh" uid="uid://d1mlmbftc5rww" path="res://assets/characters/tuxedo_man/tuxedo_man_back_mesh.tres" id="4_0o3ak"]
+[ext_resource type="Material" uid="uid://s3hml0ixrvqg" path="res://assets/characters/tuxedo_man/tuxedo_man_back_material.tres" id="5_yodb1"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_geudx"]
 cull_mode = 1

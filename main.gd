@@ -6,9 +6,9 @@ extends Node3D
 @onready var guests_node : Node3D = $Guests
 @onready var ui: UICanvas = $UI
 
-var npc_wolf_lady = preload("res://assets/Characters/wolf_lady.tscn")
-var npc_lady_wolf = preload("res://assets/Characters/lady_wolf.tscn")
-var npc_tuxed_man = preload("res://assets/Characters/tuxedo_man.tscn")
+var npc_wolf_lady = preload("res://assets/Characters/wolf_lady/wolf_lady.tscn")
+var npc_lady_wolf = preload("res://assets/Characters/lady_wolf/lady_wolf.tscn")
+var npc_tuxed_man = preload("res://assets/Characters/tuxedo_man/tuxedo_man.tscn")
 
 var rotation_tween : Tween = null
 var current_rotation_target : float = 0.0
