@@ -1,0 +1,23 @@
+[gd_scene format=3 uid="uid://dw74dkadp4odu"]
+
+[ext_resource type="Script" uid="uid://oyms4u2gt1wl" path="res://assets/characters/npc.gd" id="1_kfyao"]
+[ext_resource type="ArrayMesh" uid="uid://bui27yq5mktvb" path="res://assets/characters/lady_wolf/lady_wolf_front_mesh.tres" id="2_hbv41"]
+[ext_resource type="Material" uid="uid://dgmo1b0piunwc" path="res://assets/characters/lady_wolf/lady_wolf_front_material.tres" id="3_i01my"]
+[ext_resource type="ArrayMesh" uid="uid://bwtbu7hp7smlt" path="res://assets/characters/lady_wolf/lady_wolf_back_mesh.tres" id="4_46ufj"]
+[ext_resource type="Material" uid="uid://dx7bbtq2gf7xm" path="res://assets/characters/lady_wolf/lady_wolf_back_material.tres" id="5_xhnxu"]
+
+[node name="Npc" type="StaticBody3D" unique_id=1518086298]
+script = ExtResource("1_kfyao")
+
+[node name="MeshInstance3DFront" type="MeshInstance3D" parent="." unique_id=1615926836]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.15, 0.02)
+mesh = ExtResource("2_hbv41")
+surface_material_override/0 = ExtResource("3_i01my")
+
+[node name="MeshInstance3DBack" type="MeshInstance3D" parent="." unique_id=721932902]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 1.15, -0.02)
+mesh = ExtResource("4_46ufj")
+surface_material_override/0 = ExtResource("5_xhnxu")
+
+[node name="MeshInstance3DMask" type="MeshInstance3D" parent="." unique_id=2108584159]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.9526082, 0)

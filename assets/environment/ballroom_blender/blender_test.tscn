@@ -1,0 +1,25 @@
+[gd_scene format=3 uid="uid://cdpe8h0371r4x"]
+
+[ext_resource type="PackedScene" uid="uid://cenaafapumuvj" path="res://assets/environment/ballroom_blender/ballroom.tscn" id="1_248oe"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_248oe"]
+sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
+ground_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
+
+[sub_resource type="Sky" id="Sky_pujmb"]
+sky_material = SubResource("ProceduralSkyMaterial_248oe")
+
+[sub_resource type="Environment" id="Environment_ra5kl"]
+background_mode = 2
+sky = SubResource("Sky_pujmb")
+ambient_light_source = 2
+ambient_light_color = Color(1, 1, 1, 1)
+tonemap_mode = 2
+glow_enabled = true
+
+[node name="BlenderTest" type="Node3D" unique_id=1291135969]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=365754046]
+environment = SubResource("Environment_ra5kl")
+
+[node name="Ballroom" parent="." unique_id=2009671196 instance=ExtResource("1_248oe")]

@@ -1,10 +1,12 @@
 [gd_scene format=3 uid="uid://blfxxb66ypa2d"]
 
 [ext_resource type="Script" uid="uid://ca3d060o4l3vc" path="res://main.gd" id="1_0xm2m"]
-[ext_resource type="PackedScene" uid="uid://buli0jmq1ctia" path="res://assets/environment/ballroom/ballroom.tscn" id="1_ig7tw"]
+[ext_resource type="PackedScene" uid="uid://cenaafapumuvj" path="res://assets/environment/ballroom_blender/ballroom.tscn" id="2_1bvp3"]
 [ext_resource type="Script" uid="uid://bcqdysmsdsju3" path="res://camera_3d.gd" id="3_5vw27"]
+[ext_resource type="Script" uid="uid://bvhs3fdkqhstg" path="res://assets/environment/ballroom/ballroom.gd" id="3_lquwl"]
 [ext_resource type="PackedScene" uid="uid://cvb7oai2gic3m" path="res://UICanvas.tscn" id="4_1bvp3"]
-[ext_resource type="PackedScene" uid="uid://dc8mewa5705na" path="res://assets/characters/test_body_dead/brutal_assassination.tscn" id="5_lquwl"]
+[ext_resource type="ArrayMesh" uid="uid://ot63stf0orm8" path="res://assets/characters/victim/victim_mesh.tres" id="4_272bh"]
+[ext_resource type="Material" uid="uid://by3jdt2yajfmk" path="res://assets/characters/victim/victim_material.tres" id="5_5vw27"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_0xm2m"]
 sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
@@ -16,30 +18,41 @@ sky_material = SubResource("ProceduralSkyMaterial_0xm2m")
 [sub_resource type="Environment" id="Environment_1bvp3"]
 background_mode = 2
 sky = SubResource("Sky_h2yge")
+ambient_light_source = 2
+ambient_light_color = Color(1, 1, 0.7411765, 1)
+ambient_light_energy = 0.01
 tonemap_mode = 2
 glow_enabled = true
 
-[sub_resource type="Curve" id="Curve_h2yge"]
-_limits = [0.0, 1.0, -1.0, 1.0]
-_data = [Vector2(0, 1), 0.0, -0.5045797, 0, 0, Vector2(0.12455511, 0.8951612), -2.3691318, -2.3691318, 0, 0, Vector2(0.41637015, 0.06598234), -1.1082009, -1.1082009, 0, 0, Vector2(0.6085409, 0), 0.0, 0.0, 0, 0, Vector2(1, 0), 0.0, 0.0, 0, 0]
-point_count = 5
+[sub_resource type="Curve" id="Curve_lquwl"]
+_data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(0.4519573, 1), 0.0, 0.0, 0, 0, Vector2(0.7081851, 0), 0.0, 0.0, 0, 0, Vector2(1, 0), 0.0, 0.0, 0, 0]
+point_count = 4
 
 [sub_resource type="Curve" id="Curve_1bvp3"]
-_data = [Vector2(0, 0), 0.0, 0.0, 0, 0, Vector2(0.72490704, 0.42647052), 1.886457, 1.886457, 0, 0, Vector2(1, 1), 0.0, 0.0, 0, 0]
-point_count = 3
+_data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(0.2825279, 1), 0.0, 0.0, 0, 0, Vector2(0.7137547, 0), 0.0, 0.0, 0, 0, Vector2(1, 0), 0.0, 0.0, 0, 0]
+point_count = 4
 
 [node name="Main" type="Node3D" unique_id=69639745 groups=["npcs"]]
 script = ExtResource("1_0xm2m")
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=1515158422]
 transform = Transform3D(-0.8660254, -0.43301278, 0.25, 0, 0.49999997, 0.86602545, -0.50000006, 0.75, -0.43301266, 0, 0, 0)
+visible = false
 shadow_enabled = true
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=440934493]
 environment = SubResource("Environment_1bvp3")
 
-[node name="Ballroom" parent="." unique_id=1980456979 instance=ExtResource("1_ig7tw")]
-transparency_curve = SubResource("Curve_h2yge")
+[node name="Ballroom" parent="." unique_id=2009671196 instance=ExtResource("2_1bvp3")]
+script = ExtResource("3_lquwl")
+transparency_curve = SubResource("Curve_lquwl")
+
+[node name="Victim" type="StaticBody3D" parent="." unique_id=633114784]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Victim" unique_id=923936209]
+transform = Transform3D(1, 0, 0, 0, -4.3711385e-08, 0.99999994, 0, -0.99999994, -4.3711385e-08, 0, 0.628466, -0.04043054)
+mesh = ExtResource("4_272bh")
+surface_material_override/0 = ExtResource("5_5vw27")
 
 [node name="CameraPivot" type="Node3D" parent="." unique_id=721909920]
 
@@ -58,5 +71,11 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -8.8165245)
 
 [node name="UI" parent="." unique_id=863748369 instance=ExtResource("4_1bvp3")]
 
-[node name="Brutal Assassination" parent="." unique_id=2002056330 instance=ExtResource("5_lquwl")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.6992295, 0.5788307, 0.027485264)
+[node name="SpotLight3D" type="SpotLight3D" parent="." unique_id=212598285]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 12.05916, -3.2220208e-07)
+light_color = Color(0.9947962, 0.9765807, 0.7165069, 1)
+light_energy = 16.0
+light_size = 0.028
+light_specular = 0.0
+light_bake_mode = 1
+spot_range = 16.376232

@@ -27,16 +27,5 @@ func _process(_delta: float) -> void:
 			update_wall_transparency(child, alpha)
 
 func update_wall_transparency(mesh: MeshInstance3D, alpha: float) -> void:
-	var mat = mesh.get_surface_override_material(0) as StandardMaterial3D
-	if not mat:
-		var original_mat = mesh.get_active_material(0)
-		if original_mat:
-			mat = original_mat.duplicate()
-			mesh.set_surface_override_material(0, mat)
-	if mat:
-		if not is_equal_approx(mat.albedo_color.a, alpha):
-			mat.albedo_color.a = alpha
-			if alpha >= 1.0:
-				mat.transparency = BaseMaterial3D.TRANSPARENCY_DISABLED
-			else:
-				mat.transparency = BaseMaterial3D.TRANSPARENCY_ALPHA
+	if not is_equal_approx(mesh.transparency, alpha):
+		mesh.transparency = 1.0 - alpha

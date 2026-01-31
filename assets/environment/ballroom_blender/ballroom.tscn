@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://cenaafapumuvj"]
+
+[ext_resource type="PackedScene" uid="uid://hg2okpbutgmw" path="res://blender/Ballroom.blend" id="1_rju0o"]
+
+[node name="Ballroom" unique_id=2009671196 instance=ExtResource("1_rju0o")]
+
+[node name="Wall03" parent="." index="0" unique_id=2060025301]
+visible = false
+
+[node name="Wall02" parent="." index="1" unique_id=463891220]
+visible = false
+
+[node name="Wall01" parent="." index="2" unique_id=78031184]
+visible = false
+
+[node name="Wall00" parent="." index="3" unique_id=1702274410]
+visible = false

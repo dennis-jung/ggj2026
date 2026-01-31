@@ -1,0 +1,7 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://by3jdt2yajfmk"]
+
+[ext_resource type="Texture2D" uid="uid://rv88d525aign" path="res://assets/characters/victim/victim.png" id="1_lktir"]
+
+[resource]
+albedo_texture = ExtResource("1_lktir")
+texture_filter = 0
