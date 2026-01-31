@@ -8,6 +8,8 @@ extends Node3D
 
 var npc_wolf_lady = preload("res://wolf_lady.tscn")
 
+var selected_body : StaticBody3D
+
 var rotation_tween : Tween = null
 var current_rotation_target : float = 0.0
 var is_rotating : bool = false
@@ -34,7 +36,10 @@ func _input(event: InputEvent) -> void:
 		if result:
 			var hit_object = result.collider
 			print("Clicked on: ", hit_object.name, " [", result.collider_id, "]")
-			if hit_object.has_method("select"):
+			if (hit_object.has_method("deselect")):
+				hit_object.deselect()
+			selected_body = hit_object
+			if (hit_object.has_method("select")):
 				hit_object.select()
 
 func _process(_delta: float) -> void:
@@ -54,14 +59,15 @@ func end_rotation() -> void:
 	is_rotating = false
 
 func add_guests() -> void:
-	for i in 50:
-		var x := randf_range(-8.0, 8.0)
-		var z := randf_range(-8.0, 8.0)
+	for i in 500:
+		var x := randf_range(-9.0, 9.0)
+		var z := randf_range(-9.0, 9.0)
 		var rot := deg_to_rad(randf_range(0.0, 360.0))
 		var npc = npc_wolf_lady.instantiate()
 		npc.name = "WolfLady_" + str(i)
 		guests_node.add_child(npc)
 		npc.rotation.y = rot
 		npc.global_position = Vector3(x, 0.6, z)
+		npc.add_to_group("npcs")
 		
 		
