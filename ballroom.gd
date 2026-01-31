@@ -8,6 +8,12 @@ class_name Ballroom
 @onready var wallWest : MeshInstance3D = $Wall02
 @onready var wallSouth : MeshInstance3D = $Wall03
 
+func _ready() -> void:
+	wallEast.show()
+	wallNorth.show()
+	wallWest.show()
+	wallSouth.show()
+
 func set_wall_visibility(rotation_y : float) -> void:
 	var clamped_rotation_deg : int  = int(rad_to_deg(rotation_y)) % 360
 	if (clamped_rotation_deg < 0):

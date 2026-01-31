@@ -2,8 +2,7 @@
 
 [ext_resource type="Script" uid="uid://ca3d060o4l3vc" path="res://main.gd" id="1_0xm2m"]
 [ext_resource type="PackedScene" uid="uid://buli0jmq1ctia" path="res://ballroom.tscn" id="1_ig7tw"]
-[ext_resource type="ArrayMesh" uid="uid://dlqk51cep57f8" path="res://assets/Characters/wolf_lady_mesh.tres" id="3_1bvp3"]
-[ext_resource type="Material" uid="uid://gauyip4u8vx2" path="res://assets/Characters/wolf_lady_material_3d.tres" id="4_lquwl"]
+[ext_resource type="Script" uid="uid://bcqdysmsdsju3" path="res://camera_3d.gd" id="3_5vw27"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_0xm2m"]
 sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
@@ -36,14 +35,9 @@ environment = SubResource("Environment_1bvp3")
 transform = Transform3D(1, 0, 0, 0, 0.9862106, 0.16549516, 0, -0.16549516, 0.9862106, 0, 14.973859, 24.844223)
 fov = 60.0
 size = 20.0
+script = ExtResource("3_5vw27")
 
 [node name="CameraTarget" type="Node3D" parent="CameraPivot" unique_id=1447353489]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -8.8165245)
 
-[node name="WolfLady" type="Node3D" parent="." unique_id=1738052655]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.62099254, 0)
-
-[node name="MeshInstance3D" type="MeshInstance3D" parent="WolfLady" unique_id=32734089]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.153903, 0)
-mesh = ExtResource("3_1bvp3")
-surface_material_override/0 = ExtResource("4_lquwl")
+[node name="Guests" type="Node3D" parent="." unique_id=518338895]

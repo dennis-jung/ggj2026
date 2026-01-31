@@ -2,8 +2,11 @@ extends Node3D
 
 @onready var ballroom : Ballroom = $Ballroom
 @onready var camera_pivot : Node3D = $CameraPivot
-@onready var camera : Camera3D = $CameraPivot/Camera3D
+@onready var camera : GameCamera = $CameraPivot/Camera3D
 @onready var cameraTarget : Node3D = $CameraPivot/CameraTarget
+@onready var guests_node : Node3D = $Guests
+
+var npc_wolf_lady = preload("res://wolf_lady.tscn")
 
 var rotation_tween : Tween = null
 var current_rotation_target : float = 0.0
@@ -13,6 +16,7 @@ func _ready() -> void:
 	camera.look_at(cameraTarget.position)
 	camera_pivot.rotation.y = deg_to_rad(45.0)
 	current_rotation_target = camera_pivot.rotation.y
+	add_guests()
 
 func _input(event: InputEvent) -> void:
 	if event.is_action_pressed("rotate_left"):
@@ -25,6 +29,13 @@ func _input(event: InputEvent) -> void:
 		camera.translate_object_local(Vector3(0.0, 0.0, -1.0))
 	if event.is_action("zoom_out"):
 		camera.translate_object_local(Vector3(0.0, 0.0, +1.0))
+	if event is InputEventMouseButton and event.pressed and event.button_index == MOUSE_BUTTON_LEFT:
+		var result = camera.perform_raycast()
+		if result:
+			var hit_object = result.collider
+			print("Clicked on: ", hit_object.name, " [", result.collider_id, "]")
+			if hit_object.has_method("select"):
+				hit_object.select()
 
 func _process(_delta: float) -> void:
 	ballroom.set_wall_visibility(camera_pivot.rotation.y)
@@ -41,3 +52,16 @@ func rotate_camera() -> void:
 
 func end_rotation() -> void:
 	is_rotating = false
+
+func add_guests() -> void:
+	for i in 50:
+		var x := randf_range(-8.0, 8.0)
+		var z := randf_range(-8.0, 8.0)
+		var rot := deg_to_rad(randf_range(0.0, 360.0))
+		var npc = npc_wolf_lady.instantiate()
+		npc.name = "WolfLady_" + str(i)
+		guests_node.add_child(npc)
+		npc.rotation.y = rot
+		npc.global_position = Vector3(x, 0.6, z)
+		
+		
