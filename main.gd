@@ -5,9 +5,11 @@ extends Node3D
 @onready var cameraTarget : Node3D = $CameraPivot/CameraTarget
 @onready var guests_node : Node3D = $Guests
 
-var npc_wolf_lady = preload("res://wolf_lady.tscn")
+var npc_wolf_lady = preload("res://assets/Characters/wolf_lady.tscn")
+var npc_lady_wolf = preload("res://assets/Characters/lady_wolf.tscn")
+var npc_tuxed_man = preload("res://assets/Characters/tuxedo_man.tscn")
 
-var selected_body : StaticBody3D
+var selected_npc : Npc
 
 var rotation_tween : Tween = null
 var current_rotation_target : float = 0.0
@@ -33,11 +35,12 @@ func _input(event: InputEvent) -> void:
 	if event is InputEventMouseButton and event.pressed and event.button_index == MOUSE_BUTTON_LEFT:
 		var result = camera.perform_raycast()
 		if result:
-			var hit_object = result.collider
+			var hit_object = result.collider as Npc
 			print("Clicked on: ", hit_object.name, " [", result.collider_id, "]")
-			if (hit_object.has_method("deselect")):
-				hit_object.deselect()
-			selected_body = hit_object
+			if (selected_npc):
+				if (selected_npc.has_method("deselect")):
+					selected_npc.deselect()
+			selected_npc = hit_object
 			if (hit_object.has_method("select")):
 				hit_object.select()
 
@@ -55,11 +58,15 @@ func end_rotation() -> void:
 	is_rotating = false
 
 func add_guests() -> void:
-	for i in 500:
+	for i in 100:
+		var npc
+		if (randf_range(-1.0, 1.0) >= 0.0):
+			npc = npc_lady_wolf.instantiate()
+		else:
+			npc = npc_tuxed_man.instantiate()
 		var x := randf_range(-9.0, 9.0)
 		var z := randf_range(-9.0, 9.0)
 		var rot := deg_to_rad(randf_range(0.0, 360.0))
-		var npc = npc_wolf_lady.instantiate()
 		npc.name = "WolfLady_" + str(i)
 		guests_node.add_child(npc)
 		npc.rotation.y = rot

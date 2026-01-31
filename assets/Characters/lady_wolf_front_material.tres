@@ -1,0 +1,7 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://dgmo1b0piunwc"]
+
+[ext_resource type="Texture2D" uid="uid://coegouswwan6d" path="res://assets/Characters/LadyWolf_cutout_front.png" id="1_656dy"]
+
+[resource]
+albedo_texture = ExtResource("1_656dy")
+texture_filter = 0

@@ -8,6 +8,18 @@
 [ext_resource type="ArrayMesh" uid="uid://byudjk5n6wm31" path="res://assets/Characters/wolf_lady_back_mesh.tres" id="4_6hmbu"]
 [ext_resource type="Material" uid="uid://bivhjpwh7onvq" path="res://assets/Characters/wolf_lady_back_material_3d.tres" id="5_ucets"]
 [ext_resource type="Texture2D" uid="uid://x3kvmi88hhiq" path="res://assets/Characters/WolfLadyBack.png" id="6_ksfgb"]
+[ext_resource type="ArrayMesh" uid="uid://bui27yq5mktvb" path="res://assets/Characters/lady_wolf_front_mesh.tres" id="9_ovhgs"]
+[ext_resource type="Material" uid="uid://dgmo1b0piunwc" path="res://assets/Characters/lady_wolf_front_material.tres" id="10_7lb6g"]
+[ext_resource type="Texture2D" uid="uid://coegouswwan6d" path="res://assets/Characters/LadyWolf_cutout_front.png" id="11_svv5g"]
+[ext_resource type="ArrayMesh" uid="uid://bwtbu7hp7smlt" path="res://assets/Characters/lady_wolf_back_mesh.tres" id="12_8i4e1"]
+[ext_resource type="Material" uid="uid://dx7bbtq2gf7xm" path="res://assets/Characters/lady_wolf_back_material.tres" id="13_l4m6v"]
+[ext_resource type="Texture2D" uid="uid://chpwtpesrr2wr" path="res://assets/Characters/LadyWolf_cutout_back.png" id="14_vfkow"]
+[ext_resource type="ArrayMesh" uid="uid://cgah1j741eks8" path="res://assets/Characters/tuxedo_man_front_mesh.tres" id="15_opvba"]
+[ext_resource type="Material" uid="uid://b8jdxesj7a0b0" path="res://assets/Characters/tuxedo_man_front_material.tres" id="16_6k0d6"]
+[ext_resource type="Texture2D" uid="uid://bf3rl20q8vb53" path="res://assets/Characters/Tuxedo-Man_front.png" id="17_ax5dg"]
+[ext_resource type="ArrayMesh" uid="uid://d1mlmbftc5rww" path="res://assets/Characters/tuxedo_man_back_mesh.tres" id="18_ml8se"]
+[ext_resource type="Material" uid="uid://s3hml0ixrvqg" path="res://assets/Characters/tuxedo_man_back_material.tres" id="19_xdf3x"]
+[ext_resource type="Texture2D" uid="uid://ddxd53cfuulhh" path="res://assets/Characters/Tuxedo-Man_back.png" id="20_e6tsy"]
 
 [sub_resource type="Resource" id="Resource_vsw4r"]
 script = ExtResource("3_2jd7x")
@@ -18,6 +30,26 @@ material = ExtResource("2_6hmbu")
 script = ExtResource("3_2jd7x")
 meshes = Array[ArrayMesh]([ExtResource("4_6hmbu")])
 material = ExtResource("5_ucets")
+
+[sub_resource type="Resource" id="Resource_opvba"]
+script = ExtResource("3_2jd7x")
+meshes = Array[ArrayMesh]([ExtResource("9_ovhgs")])
+material = ExtResource("10_7lb6g")
+
+[sub_resource type="Resource" id="Resource_ovhgs"]
+script = ExtResource("3_2jd7x")
+meshes = Array[ArrayMesh]([ExtResource("12_8i4e1")])
+material = ExtResource("13_l4m6v")
+
+[sub_resource type="Resource" id="Resource_xj21o"]
+script = ExtResource("3_2jd7x")
+meshes = Array[ArrayMesh]([ExtResource("15_opvba")])
+material = ExtResource("16_6k0d6")
+
+[sub_resource type="Resource" id="Resource_u6o2n"]
+script = ExtResource("3_2jd7x")
+meshes = Array[ArrayMesh]([ExtResource("18_ml8se")])
+material = ExtResource("19_xdf3x")
 
 [node name="StagingArea" type="Node3D" unique_id=1293640967]
 
@@ -38,4 +70,44 @@ script = ExtResource("2_sjfic")
 texture = ExtResource("6_ksfgb")
 depth = 5.0
 generated_sprite_mesh = SubResource("Resource_uh630")
+metadata/_custom_type_script = "uid://xdmm7egms4uv"
+
+[node name="LadyWolfFront" type="MeshInstance3D" parent="." unique_id=420480904]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.3999305, 0, 0)
+mesh = ExtResource("9_ovhgs")
+surface_material_override/0 = ExtResource("10_7lb6g")
+script = ExtResource("2_sjfic")
+texture = ExtResource("11_svv5g")
+depth = 5.0
+generated_sprite_mesh = SubResource("Resource_opvba")
+metadata/_custom_type_script = "uid://xdmm7egms4uv"
+
+[node name="LadyWolfBack" type="MeshInstance3D" parent="." unique_id=1325875537]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.441041, 0, 0)
+mesh = ExtResource("12_8i4e1")
+surface_material_override/0 = ExtResource("13_l4m6v")
+script = ExtResource("2_sjfic")
+texture = ExtResource("14_vfkow")
+depth = 5.0
+generated_sprite_mesh = SubResource("Resource_ovhgs")
+metadata/_custom_type_script = "uid://xdmm7egms4uv"
+
+[node name="TuxedoManFront" type="MeshInstance3D" parent="." unique_id=2102473593]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.606367, 0, 0)
+mesh = ExtResource("15_opvba")
+surface_material_override/0 = ExtResource("16_6k0d6")
+script = ExtResource("2_sjfic")
+texture = ExtResource("17_ax5dg")
+depth = 5.0
+generated_sprite_mesh = SubResource("Resource_xj21o")
+metadata/_custom_type_script = "uid://xdmm7egms4uv"
+
+[node name="TuxedoManBack" type="MeshInstance3D" parent="." unique_id=1601796309]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.8406599, 0, 0)
+mesh = ExtResource("18_ml8se")
+surface_material_override/0 = ExtResource("19_xdf3x")
+script = ExtResource("2_sjfic")
+texture = ExtResource("20_e6tsy")
+depth = 5.0
+generated_sprite_mesh = SubResource("Resource_u6o2n")
 metadata/_custom_type_script = "uid://xdmm7egms4uv"

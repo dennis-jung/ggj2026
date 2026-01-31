@@ -1,5 +1,5 @@
 extends StaticBody3D
-class_name WolfLady
+class_name Npc
 
 @onready var meshFront : MeshInstance3D = $MeshInstanceFront
 
