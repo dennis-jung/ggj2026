@@ -5,7 +5,6 @@ extends Node3D
 @onready var camera_pivot : Node3D = $CameraPivot
 @onready var camera : GameCamera = $CameraPivot/Camera3D
 @onready var cameraTarget : Node3D = $CameraPivot/CameraTarget
-@onready var guests : Node3D = $Guests
 @onready var ui: UICanvas = $UI
 
 var rotation_tween : Tween = null
