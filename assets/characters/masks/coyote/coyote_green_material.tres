@@ -1,0 +1,8 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://chm0aw2c5lfx0"]
+
+[ext_resource type="Texture2D" uid="uid://djixofg571kgw" path="res://assets/characters/masks/coyote/Mask_coyote_3.png" id="1_r6e6j"]
+
+[resource]
+resource_name = "green"
+albedo_texture = ExtResource("1_r6e6j")
+texture_filter = 0

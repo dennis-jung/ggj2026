@@ -1,0 +1,8 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://c4y0kgqqsgi4s"]
+
+[ext_resource type="Texture2D" uid="uid://bfnatqrwxkrnk" path="res://assets/characters/masks/wolf/Mask_wolf_1.png" id="1_g5xlh"]
+
+[resource]
+resource_name = "yellow"
+albedo_texture = ExtResource("1_g5xlh")
+texture_filter = 0

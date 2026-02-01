@@ -1,0 +1,8 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://numgxl10bfsd"]
+
+[ext_resource type="Texture2D" uid="uid://drycmihcy11oi" path="res://assets/characters/masks/wolf/Mask_wolf_2.png" id="1_nmoc6"]
+
+[resource]
+resource_name = "red"
+albedo_texture = ExtResource("1_nmoc6")
+texture_filter = 0

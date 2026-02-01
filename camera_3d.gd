@@ -34,7 +34,7 @@ func _process(_delta: float):
 	transform.origin.z = zoom_dist
 	
 	var height_factor = height_curve.sample(current_zoom_ratio)
-	transform.origin.y = lerp(12.0, 5.0, height_factor) # Adjust 8 and 2 for tilt
+	transform.origin.y = lerp(5.0, 8.0, height_factor) # Adjust 8 and 2 for tilt
 
 	# 3. Calculate the Dynamic Look-At Target
 	# As we zoom in, we shift the target toward the camera's direction

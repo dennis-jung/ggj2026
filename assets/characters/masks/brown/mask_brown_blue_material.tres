@@ -1,0 +1,8 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://dm26kyp28cbsp"]
+
+[ext_resource type="Texture2D" uid="uid://d1xd5uqglq8jj" path="res://assets/characters/masks/brown/Mask_brown_blue.png" id="1_0uvnk"]
+
+[resource]
+resource_name = "blue"
+albedo_texture = ExtResource("1_0uvnk")
+texture_filter = 0

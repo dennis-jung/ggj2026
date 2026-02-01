@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://djixofg571kgw"
-path="res://.godot/imported/Mask_coyote_3.png-0939d1828e1efd6c08d72e75fc4f87b8.ctex"
+uid="uid://cpmnlx1uw2fn6"
+path="res://.godot/imported/Mask_wolf.png-6cb8ee6107ffe6a142dad83b92f94eb5.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/characters/masks/Mask_coyote_3.png"
-dest_files=["res://.godot/imported/Mask_coyote_3.png-0939d1828e1efd6c08d72e75fc4f87b8.ctex"]
+source_file="res://assets/characters/masks/wolf/Mask_wolf.png"
+dest_files=["res://.godot/imported/Mask_wolf.png-6cb8ee6107ffe6a142dad83b92f94eb5.ctex"]
 
 [params]
 
