@@ -138,5 +138,106 @@ light_energy = 16.0
 light_size = 0.028
 light_specular = 0.0
 light_bake_mode = 1
-spot_range = 16.376232
-spot_angle = 49.54683
+shadow_enabled = true
+spot_range = 16.0
+spot_attenuation = 0.4
+spot_angle = 24.0
+
+[node name="OmniLight3D" type="OmniLight3D" parent="." unique_id=200821406]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.3091383, 1.7552943, -1.4230129)
+light_color = Color(0.9530421, 0.81358504, 0.6464887, 1)
+light_energy = 0.1
+light_indirect_energy = 0.2
+light_volumetric_fog_energy = 0.0
+light_bake_mode = 1
+shadow_enabled = true
+
+[node name="OmniLight3D2" type="OmniLight3D" parent="." unique_id=62424317]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.417539, 1.7552943, 3.085857)
+light_color = Color(0.9530421, 0.81358504, 0.6464887, 1)
+light_energy = 0.1
+light_indirect_energy = 0.2
+light_volumetric_fog_energy = 0.0
+light_bake_mode = 1
+shadow_enabled = true
+
+[node name="OmniLight3D4" type="OmniLight3D" parent="." unique_id=1078108774]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.824862, 1.9189694, 3.1324725)
+light_color = Color(0.9530421, 0.81358504, 0.6464887, 1)
+light_energy = 0.1
+light_indirect_energy = 0.2
+light_volumetric_fog_energy = 0.0
+light_bake_mode = 1
+shadow_enabled = true
+
+[node name="OmniLight3D5" type="OmniLight3D" parent="." unique_id=708839737]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.305272, 1.9189694, 2.2794802)
+light_color = Color(0.9530421, 0.81358504, 0.6464887, 1)
+light_energy = 0.1
+light_indirect_energy = 0.2
+light_volumetric_fog_energy = 0.0
+light_bake_mode = 1
+shadow_enabled = true
+
+[node name="OmniLight3D6" type="OmniLight3D" parent="." unique_id=1843466744]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.0310826, 1.9189694, 4.1200833)
+light_color = Color(0.9530421, 0.81358504, 0.6464887, 1)
+light_energy = 0.1
+light_indirect_energy = 0.2
+light_volumetric_fog_energy = 0.0
+light_bake_mode = 1
+shadow_enabled = true
+
+[node name="OmniLight3D7" type="OmniLight3D" parent="." unique_id=1419410797]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.0310826, 1.9189694, 0.16889048)
+light_color = Color(0.9530421, 0.81358504, 0.6464887, 1)
+light_energy = 0.1
+light_indirect_energy = 0.2
+light_volumetric_fog_energy = 0.0
+light_bake_mode = 1
+shadow_enabled = true
+
+[node name="OmniLight3D8" type="OmniLight3D" parent="." unique_id=1676842509]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.9054656, 2.0058174, -0.7383698)
+light_color = Color(0.9530421, 0.81358504, 0.6464887, 1)
+light_energy = 0.1
+light_indirect_energy = 0.2
+light_volumetric_fog_energy = 0.0
+light_bake_mode = 1
+shadow_enabled = true
+
+[node name="OmniLight3D9" type="OmniLight3D" parent="." unique_id=446765153]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.103973, 2.0058174, 1.4125913)
+light_color = Color(0.9530421, 0.81358504, 0.6464887, 1)
+light_energy = 0.1
+light_indirect_energy = 0.2
+light_volumetric_fog_energy = 0.0
+light_bake_mode = 1
+shadow_enabled = true
+
+[node name="OmniLight3D10" type="OmniLight3D" parent="." unique_id=768636692]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.103973, 2.0058174, -2.394795)
+light_color = Color(0.9530421, 0.81358504, 0.6464887, 1)
+light_energy = 0.1
+light_indirect_energy = 0.2
+light_volumetric_fog_energy = 0.0
+light_bake_mode = 1
+shadow_enabled = true
+
+[node name="OmniLight3D11" type="OmniLight3D" parent="." unique_id=234105600]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.4583035, 2.0058174, -1.5166962)
+light_color = Color(0.9530421, 0.81358504, 0.6464887, 1)
+light_energy = 0.1
+light_indirect_energy = 0.2
+light_volumetric_fog_energy = 0.0
+light_bake_mode = 1
+shadow_enabled = true
+
+[node name="OmniLight3D3" type="OmniLight3D" parent="." unique_id=117432055]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.8497226, 1.7552943, 0.31203794)
+light_color = Color(0.9530421, 0.81358504, 0.6464887, 1)
+light_energy = 0.1
+light_indirect_energy = 0.2
+light_volumetric_fog_energy = 0.0
+light_bake_mode = 1
+shadow_enabled = true
