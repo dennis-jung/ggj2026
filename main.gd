@@ -65,6 +65,14 @@ func handle_npc_click() -> void:
 							ui.show_bottom_text_box(clue.text, maskTexture)
 						"clue":
 							ui.show_bottom_text_box(clue.text, maskTexture)
+						"last_clue":
+							ui.show_bottom_text_box(clue.text, maskTexture)
+							var mask_data = npc.get_mask_details()
+							var npcs_with_mask = get_tree().get_nodes_in_group(mask_data.type + "__" + mask_data.material)
+							for item in npcs_with_mask:
+								var mask_npc = item as Npc
+								mask_npc.exclude_from_suspects()
+							deselect_all()
 	else:
 		#print("Clicked away")
 		ui.hide_bottom_text_box()
