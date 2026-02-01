@@ -19,6 +19,7 @@
 [ext_resource type="Material" uid="uid://numgxl10bfsd" path="res://assets/characters/masks/wolf/wolf_red_material.tres" id="10_gmarq"]
 [ext_resource type="ArrayMesh" uid="uid://ot63stf0orm8" path="res://assets/characters/victim/victim_mesh.tres" id="11_28rm5"]
 [ext_resource type="Material" uid="uid://by3jdt2yajfmk" path="res://assets/characters/victim/victim_material.tres" id="12_bncxc"]
+[ext_resource type="Material" uid="uid://c4y0kgqqsgi4s" path="res://assets/characters/masks/wolf/wolf_yellow_material.tres" id="18_28rm5"]
 
 [sub_resource type="Curve" id="Curve_gmarq"]
 _data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(0.3594306, 1), 0.0, 0.0, 0, 0, Vector2(0.48042703, 0.7998533), -3.538987, -3.538987, 0, 0, Vector2(0.55871886, 0.23753667), -4.382431, -4.382431, 0, 0, Vector2(0.6939502, 0), 0.0, 0.0, 0, 0, Vector2(1, 0), 0.0, 0.0, 0, 0]
@@ -60,6 +61,54 @@ transform = Transform3D(-0.9972721, 0, 0.07381271, 0, 1, 0, -0.07381271, 0, -0.9
 
 [node name="MaskWolf" parent="Guests/NpcMan2" unique_id=562816906 instance=ExtResource("9_c3k6u")]
 material = ExtResource("10_gmarq")
+
+[node name="NewArrivals1" parent="Guests" unique_id=1334281488 instance=ExtResource("3_kc2v0")]
+transform = Transform3D(0.96384007, 0, 0.26648146, 0, 1, 0, -0.26648146, 0, 0.96384007, -0.19445205, 0.5659609, -5.810175)
+
+[node name="MaskWolf" parent="Guests/NewArrivals1" unique_id=40139601 instance=ExtResource("9_c3k6u")]
+material = ExtResource("18_28rm5")
+
+[node name="NewArrivals2" parent="Guests" unique_id=2036012801 instance=ExtResource("6_qi5g4")]
+transform = Transform3D(0.9059608, 0, -0.42336157, 0, 1, 0, 0.42336157, 0, 0.9059608, 1.0089271, 0.55990076, -5.326911)
+
+[node name="MaskWolf" parent="Guests/NewArrivals2" unique_id=155213677 instance=ExtResource("9_c3k6u")]
+material = ExtResource("18_28rm5")
+
+[node name="NewArrivals0" parent="Guests" unique_id=1741613956 instance=ExtResource("3_kc2v0")]
+transform = Transform3D(0.9175604, 0, -0.39759633, 0, 1, 0, 0.39759633, 0, 0.9175604, 0.1515994, 0.5685029, -4.117729)
+
+[node name="MaskWolf" parent="Guests/NewArrivals0" unique_id=1798382740 instance=ExtResource("9_c3k6u")]
+material = ExtResource("18_28rm5")
+
+[node name="NewArrivals3" parent="Guests" unique_id=442474659 instance=ExtResource("6_qi5g4")]
+transform = Transform3D(0.9517766, 0, 0.3067919, 0, 1, 0, -0.3067919, 0, 0.9517766, -0.99842787, 0.5997124, -4.4628706)
+
+[node name="MaskWolf" parent="Guests/NewArrivals3" unique_id=1979416910 instance=ExtResource("9_c3k6u")]
+material = ExtResource("18_28rm5")
+
+[node name="NewArrivals4" parent="Guests" unique_id=1505384630 instance=ExtResource("6_qi5g4")]
+transform = Transform3D(0.65368474, 0, 0.7567669, 0, 1, 0, -0.7567669, 0, 0.65368474, -2.2469504, 0.5997124, -3.5664656)
+
+[node name="MaskWolf" parent="Guests/NewArrivals4" unique_id=1297459477 instance=ExtResource("9_c3k6u")]
+material = ExtResource("18_28rm5")
+
+[node name="NewArrivals5" parent="Guests" unique_id=732274222 instance=ExtResource("3_kc2v0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.0857517, 0.61834264, -6.2620416)
+
+[node name="MaskWolf" parent="Guests/NewArrivals5" unique_id=1527548223 instance=ExtResource("9_c3k6u")]
+material = ExtResource("18_28rm5")
+
+[node name="NewArrivals6" parent="Guests" unique_id=714006210 instance=ExtResource("3_kc2v0")]
+transform = Transform3D(0.66465676, 0, -0.7471489, 0, 1, 0, 0.7471489, 0, 0.66465676, 1.1126821, 0.61834264, -4.0620594)
+
+[node name="MaskWolf" parent="Guests/NewArrivals6" unique_id=552117389 instance=ExtResource("9_c3k6u")]
+material = ExtResource("18_28rm5")
+
+[node name="NewArrivals7" parent="Guests" unique_id=1303126843 instance=ExtResource("6_qi5g4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.9253504, 0.5662439, -7.456639)
+
+[node name="MaskWolf" parent="Guests/NewArrivals7" unique_id=434951575 instance=ExtResource("9_c3k6u")]
+material = ExtResource("18_28rm5")
 
 [node name="Victim" type="StaticBody3D" parent="." unique_id=1053503868]
 

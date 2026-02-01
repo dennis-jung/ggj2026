@@ -6,5 +6,5 @@
 script = ExtResource("1_1qgo6")
 mask_type = "MaskWolf"
 eye_color = "yellow"
-clues = Array[String](["We just arrived here. We don't even know what's going on. What IS going on here?"])
+clues = Array[String](["These guests have matching masks. Are there more?", "These guests just arrived as a group. They had no time for any mischief."])
 metadata/_custom_type_script = "uid://byia06vnofho3"
