@@ -26,7 +26,6 @@ func _process(_delta: float) -> void:
 			wall_dir = wall_dir.normalized()
 			var dot = wall_dir.dot(cam_dir)
 			var alpha = transparency_curve.sample(clamp(dot, 0.0, 1.0))
-			print("dot=", dot, ", ")
 			update_wall_transparency(child, alpha)
 
 func update_wall_transparency(mesh: MeshInstance3D, alpha: float) -> void:
