@@ -19,6 +19,8 @@ func _process(_delta: float) -> void:
 
 	for child in get_children():
 		if child is MeshInstance3D:
+			if not child.name.begins_with("Wall"):
+				continue
 			var wall_dir = (child.global_position - room_center)
 			wall_dir.y = 0
 			wall_dir = wall_dir.normalized()

@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="MaskComboData" format=3 uid="uid://doiqykthk7qu3"]
+
+[ext_resource type="Script" uid="uid://byia06vnofho3" path="res://mask_combo_data.gd" id="1_ge05k"]
+
+[resource]
+script = ExtResource("1_ge05k")
+mask_type = "MaskCoyote"
+eye_color = "red"
+clues = Array[String](["They say they saw the blue eyed Wolves standing at the bar when it happened."])
+metadata/_custom_type_script = "uid://byia06vnofho3"

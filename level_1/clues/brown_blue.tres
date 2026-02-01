@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="MaskComboData" format=3 uid="uid://jdoiio0wixtk"]
+
+[ext_resource type="Script" uid="uid://byia06vnofho3" path="res://mask_combo_data.gd" id="1_bdef4"]
+
+[resource]
+script = ExtResource("1_bdef4")
+mask_type = "MaskBrown"
+eye_color = "blue"
+clues = Array[String](["They look so cute, they can't be the killers!"])
+metadata/_custom_type_script = "uid://byia06vnofho3"

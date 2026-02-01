@@ -4,14 +4,14 @@
 
 [node name="Ballroom" unique_id=2009671196 instance=ExtResource("1_rju0o")]
 
-[node name="Wall03" parent="." index="0" unique_id=2060025301]
+[node name="Wall03" parent="." index="0" unique_id=406340638]
 visible = false
 
-[node name="Wall02" parent="." index="1" unique_id=463891220]
+[node name="Wall02" parent="." index="1" unique_id=603265529]
 visible = false
 
-[node name="Wall01" parent="." index="2" unique_id=78031184]
+[node name="Wall01" parent="." index="2" unique_id=1943374812]
 visible = false
 
-[node name="Wall00" parent="." index="3" unique_id=1702274410]
+[node name="Wall00" parent="." index="3" unique_id=774036239]
 visible = false

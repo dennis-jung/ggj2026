@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="MaskComboData" format=3 uid="uid://wyflffb0brcm"]
+
+[ext_resource type="Script" uid="uid://byia06vnofho3" path="res://mask_combo_data.gd" id="1_b6ytt"]
+
+[resource]
+script = ExtResource("1_b6ytt")
+mask_type = "MaskBrown"
+eye_color = "yellow"
+clues = Array[String](["They are definitely at a business meeting with the red eyed wolves. No time for killing people."])
+metadata/_custom_type_script = "uid://byia06vnofho3"

@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="MaskComboData" format=3 uid="uid://c57wfpracc7l3"]
+
+[ext_resource type="Script" uid="uid://byia06vnofho3" path="res://mask_combo_data.gd" id="1_pyenr"]
+
+[resource]
+script = ExtResource("1_pyenr")
+mask_type = "MaskCoyote"
+eye_color = "green"
+clues = Array[String](["Those two look like they are on a date. They certainly don't have murder on their mind."])
+metadata/_custom_type_script = "uid://byia06vnofho3"

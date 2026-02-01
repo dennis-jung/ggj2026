@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="MaskComboData" format=3 uid="uid://bwku0wopf2hj1"]
+
+[ext_resource type="Script" uid="uid://byia06vnofho3" path="res://mask_combo_data.gd" id="1_1qgo6"]
+
+[resource]
+script = ExtResource("1_1qgo6")
+mask_type = "MaskWolf"
+eye_color = "yellow"
+clues = Array[String](["We just arrived here. We don't even know what's going on. What IS going on here?"])
+metadata/_custom_type_script = "uid://byia06vnofho3"
