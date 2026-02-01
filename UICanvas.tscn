@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://cvb7oai2gic3m"]
 
 [ext_resource type="Script" uid="uid://c1plojv4cgt4e" path="res://ui_canvas.gd" id="1_cd8a1"]
+[ext_resource type="Texture2D" uid="uid://citer0swvyg6l" path="res://assets/characters/masks/coyote/Mask_coyote_1.png" id="2_mknxy"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_h2yge"]
 font_size = 24
@@ -15,7 +16,7 @@ anchors_preset = 12
 anchor_top = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_top = -154.0
+offset_top = -185.0
 grow_horizontal = 2
 grow_vertical = 0
 
@@ -40,9 +41,20 @@ theme_override_constants/margin_top = 20
 theme_override_constants/margin_right = 20
 theme_override_constants/margin_bottom = 20
 
-[node name="Label" type="Label" parent="BottomTextBox/MarginContainer" unique_id=622048277]
+[node name="FlowContainer" type="FlowContainer" parent="BottomTextBox/MarginContainer" unique_id=514478596]
+layout_mode = 2
+theme_override_constants/h_separation = 32
+
+[node name="TextureRect" type="TextureRect" parent="BottomTextBox/MarginContainer/FlowContainer" unique_id=1844866038]
+custom_minimum_size = Vector2(150, 150)
+layout_mode = 2
+texture = ExtResource("2_mknxy")
+expand_mode = 2
+
+[node name="Label" type="Label" parent="BottomTextBox/MarginContainer/FlowContainer" unique_id=622048277]
 custom_minimum_size = Vector2(1000, 100)
 layout_mode = 2
+size_flags_horizontal = 3
 text = "Mauris placerat facilisis turpis sit amet luctus. Aliquam sed urna at purus sodales vulputate et eget metus. Sed rutrum ex at vehicula blandit. Pellentesque dignissim egestas auctor. Quisque in dapibus leo. Fusce rutrum metus et leo laoreet ullamcorper."
 label_settings = SubResource("LabelSettings_h2yge")
 autowrap_mode = 2

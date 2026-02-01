@@ -19,6 +19,8 @@ func _ready() -> void:
 	current_rotation_target = camera_pivot.rotation.y
 
 func _input(event: InputEvent) -> void:
+	if event.is_action_pressed("ui_cancel"):
+		get_tree().quit()
 	if event.is_action_pressed("rotate_left"):
 		current_rotation_target = current_rotation_target + deg_to_rad(90.0)
 		rotate_camera()
@@ -50,21 +52,23 @@ func handle_npc_click() -> void:
 				npc.select()
 			if selected_npcs.size() > 0:
 				if level:
-					var clue = level.get_clue(selected_npcs)
+					var clue: Dictionary[String, String] = level.get_clue(selected_npcs)
+					var maskTexture: Texture2D = selected_npcs[0].mask.material.albedo_texture
 					match clue.result:
 						"nothing":
-							ui.show_bottom_text_box(clue.text)
+							ui.show_bottom_text_box(clue.text, maskTexture)
 						"single":
-							ui.show_bottom_text_box(clue.text)
+							ui.show_bottom_text_box(clue.text, maskTexture)
 						"mismatch":
-							ui.show_bottom_text_box(clue.text)
+							ui.show_bottom_text_box(clue.text, maskTexture)
 							deselect_all()
 						"exhausted":
-							ui.show_bottom_text_box(clue.text)
+							ui.show_bottom_text_box(clue.text, maskTexture)
 						"clue":
-							ui.show_bottom_text_box(clue.text)							
+							ui.show_bottom_text_box(clue.text, maskTexture)
 	else:
 		print("Clicked away")
+		ui.hide_bottom_text_box()
 		deselect_all()
 
 func deselect_all() -> void:
