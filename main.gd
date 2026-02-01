@@ -41,6 +41,10 @@ func handle_npc_click() -> void:
 	var result = camera.perform_raycast()
 	if result:
 		var npc = result.collider as Npc
+		if not npc:
+			var mask = result.collider as Mask
+			if mask:
+				npc = mask.get_npc()
 		if npc:
 			if selected_npcs.has(npc):
 				var index = selected_npcs.find(npc)
