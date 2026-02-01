@@ -15,12 +15,12 @@ func check_mask_as_child() -> void:
 	for child in get_children():
 		if child is Mask:
 			mask = child as Mask
-			print("reparenting ", mask.name)
+			#print("reparenting ", mask.name)
 			mask.reparent(maskAttachmentPoint)
 			mask.position = Vector3.ZERO
 
 func set_mask(newMask: Mask) -> void:
-	print("NPC ", name, ", set_mask(", mask.name,")")
+	#print("NPC ", name, ", set_mask(", mask.name,")")
 	var maskPosition = get_node_or_null("MaskPosition")
 	if maskPosition:
 		for child in maskPosition.get_children():

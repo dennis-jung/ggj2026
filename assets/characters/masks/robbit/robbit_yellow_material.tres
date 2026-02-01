@@ -1,0 +1,8 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://mspucubmumdi"]
+
+[ext_resource type="Texture2D" uid="uid://byddaw0xu02da" path="res://assets/characters/masks/robbit/Robbit_1.png" id="1_5jm11"]
+
+[resource]
+resource_name = "yellow"
+albedo_texture = ExtResource("1_5jm11")
+texture_filter = 0

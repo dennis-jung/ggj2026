@@ -7,7 +7,7 @@ class_name Mask
 
 func _ready() -> void:
 	if material:
-		print("Mask ready, setting material ", material.resource_name)
+		#print("Mask ready, setting material ", material.resource_name)
 		mesh.set_surface_override_material(0, material)
 
 func set_material(new_material: StandardMaterial3D) -> void:

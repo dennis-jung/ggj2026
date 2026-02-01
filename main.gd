@@ -66,7 +66,7 @@ func handle_npc_click() -> void:
 						"clue":
 							ui.show_bottom_text_box(clue.text, maskTexture)
 	else:
-		print("Clicked away")
+		#print("Clicked away")
 		ui.hide_bottom_text_box()
 		deselect_all()
 
