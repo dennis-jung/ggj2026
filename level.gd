@@ -8,6 +8,9 @@ class_name Level
 func _ready() -> void:
 	for child in guests.get_children():
 		child.add_to_group("npcs")
+		var npc = child as Npc
+		var mask = npc.get_mask_details()
+		npc.add_to_group(mask.type + "__" + mask.material)
 
 func get_clue(selected: Array[Npc]) -> Dictionary[String, String]:
 	var mask_type: String
@@ -29,7 +32,10 @@ func get_clue(selected: Array[Npc]) -> Dictionary[String, String]:
 		if data.matches(mask_type, eye_color):
 			if (selected.size() - 1) > data.clues.size():
 				return {"result": "exhausted", "text": "This clue seems to be exhausted. Time to move to the next one."}
-			return {"result": "clue", "text": data.clues[selected.size() - 2]}
+			var result = "clue"
+			if (selected.size() - 1) == data.clues.size():
+				result = "last_clue"
+			return {"result": result, "text": data.clues[selected.size() - 2]}
 	
 	return {"result": "nothing", "text": "You sense a weird echo but gain no clues."}
 	

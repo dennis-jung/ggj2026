@@ -53,3 +53,6 @@ func get_mask_details() -> Dictionary:
 	result.set("type", mask.name)
 	result.set("material", mask.material.resource_name)
 	return result
+
+func exclude_from_suspects() -> void:
+	hide()
