@@ -29,5 +29,10 @@ func _process(_delta: float) -> void:
 			update_wall_transparency(child, alpha)
 
 func update_wall_transparency(mesh: MeshInstance3D, alpha: float) -> void:
-	if not is_equal_approx(mesh.transparency, alpha):
-		mesh.transparency = 1.0 - alpha
+	var transparency: float = 1.0 - alpha
+	if transparency < 0.1:
+		transparency = 0.0
+	elif transparency > 0.9:
+		transparency = 1.0
+	if not is_equal_approx(mesh.transparency, transparency):
+		mesh.transparency = transparency
