@@ -2,12 +2,12 @@
 
 [ext_resource type="Script" uid="uid://xdmm7egms4uv" path="res://addons/sprite_mesh/sprite_mesh_instance.gd" id="2_sjfic"]
 [ext_resource type="Script" uid="uid://onnxwjckopnl" path="res://addons/sprite_mesh/sprite_mesh.gd" id="3_2jd7x"]
+[ext_resource type="Texture2D" uid="uid://c1vf065544vwr" path="res://assets/characters/lady_wolf/Lady_back.png" id="4_vfkow"]
+[ext_resource type="Texture2D" uid="uid://c1qbdmd4ayibv" path="res://assets/characters/lady_wolf/Lady_front.png" id="8_opvba"]
 [ext_resource type="ArrayMesh" uid="uid://bui27yq5mktvb" path="res://assets/characters/lady_wolf/lady_wolf_front_mesh.tres" id="9_ovhgs"]
 [ext_resource type="Material" uid="uid://dgmo1b0piunwc" path="res://assets/characters/lady_wolf/lady_wolf_front_material.tres" id="10_7lb6g"]
-[ext_resource type="Texture2D" uid="uid://coegouswwan6d" path="res://assets/characters/lady_wolf/LadyWolf_cutout_front.png" id="11_svv5g"]
 [ext_resource type="ArrayMesh" uid="uid://bwtbu7hp7smlt" path="res://assets/characters/lady_wolf/lady_wolf_back_mesh.tres" id="12_8i4e1"]
 [ext_resource type="Material" uid="uid://dx7bbtq2gf7xm" path="res://assets/characters/lady_wolf/lady_wolf_back_material.tres" id="13_l4m6v"]
-[ext_resource type="Texture2D" uid="uid://chpwtpesrr2wr" path="res://assets/characters/lady_wolf/LadyWolf_cutout_back.png" id="14_vfkow"]
 [ext_resource type="ArrayMesh" uid="uid://ot63stf0orm8" path="res://assets/characters/victim/victim_mesh.tres" id="15_8i4e1"]
 [ext_resource type="ArrayMesh" uid="uid://cgah1j741eks8" path="res://assets/characters/tuxedo_man/tuxedo_man_front_mesh.tres" id="15_opvba"]
 [ext_resource type="Material" uid="uid://b8jdxesj7a0b0" path="res://assets/characters/tuxedo_man/tuxedo_man_front_material.tres" id="16_6k0d6"]
@@ -20,12 +20,12 @@
 [ext_resource type="Material" uid="uid://s3hml0ixrvqg" path="res://assets/characters/tuxedo_man/tuxedo_man_back_material.tres" id="19_xdf3x"]
 [ext_resource type="Texture2D" uid="uid://ddxd53cfuulhh" path="res://assets/characters/tuxedo_man/Tuxedo-Man_back.png" id="20_e6tsy"]
 
-[sub_resource type="Resource" id="Resource_ksfgb"]
+[sub_resource type="Resource" id="Resource_6k0d6"]
 script = ExtResource("3_2jd7x")
 meshes = Array[ArrayMesh]([ExtResource("12_8i4e1")])
 material = ExtResource("13_l4m6v")
 
-[sub_resource type="Resource" id="Resource_vsw4r"]
+[sub_resource type="Resource" id="Resource_ml8se"]
 script = ExtResource("3_2jd7x")
 meshes = Array[ArrayMesh]([ExtResource("9_ovhgs")])
 material = ExtResource("10_7lb6g")
@@ -70,9 +70,9 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.505005, 0, 0)
 mesh = ExtResource("12_8i4e1")
 surface_material_override/0 = ExtResource("13_l4m6v")
 script = ExtResource("2_sjfic")
-texture = ExtResource("14_vfkow")
+texture = ExtResource("4_vfkow")
 depth = 4.0
-generated_sprite_mesh = SubResource("Resource_ksfgb")
+generated_sprite_mesh = SubResource("Resource_6k0d6")
 metadata/_custom_type_script = "uid://xdmm7egms4uv"
 
 [node name="SpriteMeshInstance2" type="MeshInstance3D" parent="." unique_id=1255157576]
@@ -80,14 +80,14 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.4642334, 0, 0)
 mesh = ExtResource("9_ovhgs")
 surface_material_override/0 = ExtResource("10_7lb6g")
 script = ExtResource("2_sjfic")
-texture = ExtResource("11_svv5g")
+texture = ExtResource("8_opvba")
 depth = 5.0
 region_rect = Rect2i(0, 0, 1, 1)
-generated_sprite_mesh = SubResource("Resource_vsw4r")
+generated_sprite_mesh = SubResource("Resource_ml8se")
 metadata/_custom_type_script = "uid://xdmm7egms4uv"
 
 [node name="SpriteMeshInstance3" type="MeshInstance3D" parent="." unique_id=14550163]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.4854126, 0, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.2736206, 0, 0)
 mesh = ExtResource("15_opvba")
 surface_material_override/0 = ExtResource("16_6k0d6")
 script = ExtResource("2_sjfic")
@@ -119,7 +119,7 @@ generated_sprite_mesh = SubResource("Resource_opvba")
 metadata/_custom_type_script = "uid://xdmm7egms4uv"
 
 [node name="SpriteMeshInstance6" type="MeshInstance3D" parent="." unique_id=567452329]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.416687, 0.8965988, 0.0413208)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.204895, 0.8965988, 0.0413208)
 mesh = SubResource("ArrayMesh_6k0d6")
 surface_material_override/0 = ExtResource("18_vfkow")
 script = ExtResource("2_sjfic")
