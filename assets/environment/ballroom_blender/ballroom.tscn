@@ -2,16 +2,22 @@
 
 [ext_resource type="PackedScene" uid="uid://hg2okpbutgmw" path="res://blender/Ballroom.blend" id="1_rju0o"]
 
-[node name="Ballroom" unique_id=2009671196 instance=ExtResource("1_rju0o")]
+[node name="Ballroom" unique_id=2076178844 instance=ExtResource("1_rju0o")]
 
-[node name="Wall03" parent="." index="0" unique_id=1057263750]
+[node name="Wall03" parent="." index="0" unique_id=351516723]
 visible = false
 
-[node name="Wall02" parent="." index="1" unique_id=1766755656]
+[node name="Wall02" parent="." index="1" unique_id=45037076]
 visible = false
 
-[node name="Wall01" parent="." index="2" unique_id=940597618]
+[node name="Wall01" parent="." index="2" unique_id=1608805478]
 visible = false
 
-[node name="Wall00" parent="." index="3" unique_id=1152944860]
+[node name="Wall00" parent="." index="3" unique_id=364122404]
 visible = false
+
+[node name="Bottle" parent="." index="44" unique_id=310758734]
+transform = Transform3D(0.24754256, 0, 0, 0, 0, -0.24754256, 0, 0.24754256, 0, 8.559731, 1.7745936, -6.3010736)
+
+[node name="Bottle_012" parent="." index="56" unique_id=616719939]
+transform = Transform3D(0.24754256, 0, 0, 0, 0, -0.24754256, 0, 0.24754256, 0, 6.4433203, 1.6194003, -1.8466544)
