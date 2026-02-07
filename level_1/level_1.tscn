@@ -285,3 +285,9 @@ light_bake_mode = 1
 spot_range = 6.0
 spot_attenuation = 0.26
 spot_angle = 16.552202
+
+[node name="SpotLight3D4" type="SpotLight3D" parent="." unique_id=170987576]
+transform = Transform3D(-0.8542683, 0, 0.5198323, -0.4529207, 0.49078214, -0.7443089, -0.25512442, -0.87128234, -0.41925964, -7.283698, 1.6479473, -7.9573517)
+light_energy = 5.0
+spot_range = 8.245972
+spot_angle = 33.76309
