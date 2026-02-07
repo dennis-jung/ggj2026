@@ -30,7 +30,7 @@ data = PackedVector3Array(-0.85999995, -0.34, 0.024999999, -0.83, -0.34, 0.02499
 script = ExtResource("1_kbl00")
 combo_database = Array[ExtResource("2_c3k6u")]([ExtResource("3_gmarq"), ExtResource("4_28rm5"), ExtResource("5_bncxc"), ExtResource("6_6diyo"), ExtResource("7_gmj0w")])
 
-[node name="Ballroom" parent="." unique_id=401696826 instance=ExtResource("2_eef11")]
+[node name="Ballroom" parent="." unique_id=1303085288 instance=ExtResource("2_eef11")]
 script = ExtResource("9_gmarq")
 transparency_curve = ExtResource("10_bncxc")
 
@@ -241,3 +241,47 @@ light_indirect_energy = 0.2
 light_volumetric_fog_energy = 0.0
 light_bake_mode = 1
 shadow_enabled = true
+
+[node name="SpotLight3D2" type="SpotLight3D" parent="." unique_id=1477478783]
+transform = Transform3D(-0.26615596, -0.8481689, -0.45800722, -0.57641745, 0.52087617, -0.6296277, 0.77259564, 0.09642416, -0.6275336, -6.7424655, 1.5549684, 6.7342625)
+light_energy = 3.0
+light_bake_mode = 1
+spot_range = 7.7138715
+
+[node name="SpotLight3D3" type="SpotLight3D" parent="." unique_id=161333971]
+transform = Transform3D(-0.79127467, -0.16340479, 0.58922255, -0.5764174, 0.5208761, -0.62962765, -0.20402783, -0.8378465, -0.50634545, 7.4314084, 1.7826834, 6.848487)
+light_energy = 3.0
+light_bake_mode = 1
+spot_range = 7.7138715
+
+[node name="Spot_Stagelight" type="SpotLight3D" parent="." unique_id=1908492607]
+transform = Transform3D(1, 0, 0, 0, -0.12940131, 0.99159235, 0, -0.99159235, -0.12940131, 3.1938815, 5.851315, 7.227174)
+light_energy = 1.5
+light_bake_mode = 1
+spot_range = 5.549967
+spot_attenuation = 0.25
+spot_angle = 16.552202
+
+[node name="Spot_Stagelight2" type="SpotLight3D" parent="." unique_id=2111490798]
+transform = Transform3D(1, 0, 0, 0, -0.12940131, 0.99159235, 0, -0.99159235, -0.12940131, 0.93920135, 5.851315, 7.227174)
+light_energy = 1.5
+light_bake_mode = 1
+spot_range = 5.549967
+spot_attenuation = 0.26
+spot_angle = 16.552202
+
+[node name="Spot_Stagelight3" type="SpotLight3D" parent="." unique_id=462496020]
+transform = Transform3D(1, 0, 0, 0, -0.12940131, 0.99159235, 0, -0.99159235, -0.12940131, -1.2831608, 5.851315, 7.227174)
+light_energy = 1.5
+light_bake_mode = 1
+spot_range = 5.549967
+spot_attenuation = 0.27
+spot_angle = 16.552202
+
+[node name="Spot_Stagelight4" type="SpotLight3D" parent="." unique_id=1833395788]
+transform = Transform3D(1, 0, 0, 0, -0.12940131, 0.99159235, 0, -0.99159235, -0.12940131, -3.5650365, 5.851315, 7.227174)
+light_energy = 1.5
+light_bake_mode = 1
+spot_range = 6.0
+spot_attenuation = 0.26
+spot_angle = 16.552202
