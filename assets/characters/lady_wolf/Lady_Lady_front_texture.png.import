@@ -2,17 +2,20 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://db2tsftbxvc2c"
-path.s3tc="res://.godot/imported/Lady_back.png-321e720f7b65921d61eb88b4a70da11b.s3tc.ctex"
+uid="uid://cwhnu4waeqyv"
+path.s3tc="res://.godot/imported/Lady_Lady_front_texture.png-7e084d65e75a2fb813c997e7bb92588c.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
 }
+generator_parameters={
+"md5": "2e3897bca5e75c09feb7253aac5144a2"
+}
 
 [deps]
 
-source_file="res://assets/characters/lady_wolf/Lady_back.png"
-dest_files=["res://.godot/imported/Lady_back.png-321e720f7b65921d61eb88b4a70da11b.s3tc.ctex"]
+source_file="res://assets/characters/lady_wolf/Lady_Lady_front_texture.png"
+dest_files=["res://.godot/imported/Lady_Lady_front_texture.png-7e084d65e75a2fb813c997e7bb92588c.s3tc.ctex"]
 
 [params]
 

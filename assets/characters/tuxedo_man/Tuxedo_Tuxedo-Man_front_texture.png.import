@@ -2,17 +2,20 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://db2tsftbxvc2c"
-path.s3tc="res://.godot/imported/Lady_back.png-321e720f7b65921d61eb88b4a70da11b.s3tc.ctex"
+uid="uid://drg7vv1b4ifpo"
+path.s3tc="res://.godot/imported/Tuxedo_Tuxedo-Man_front_texture.png-b71207971b1957209d883861b4e8c69c.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
 }
+generator_parameters={
+"md5": "c540616c72fdd0ef65f67b801c0061e6"
+}
 
 [deps]
 
-source_file="res://assets/characters/lady_wolf/Lady_back.png"
-dest_files=["res://.godot/imported/Lady_back.png-321e720f7b65921d61eb88b4a70da11b.s3tc.ctex"]
+source_file="res://assets/characters/tuxedo_man/Tuxedo_Tuxedo-Man_front_texture.png"
+dest_files=["res://.godot/imported/Tuxedo_Tuxedo-Man_front_texture.png-b71207971b1957209d883861b4e8c69c.s3tc.ctex"]
 
 [params]
 

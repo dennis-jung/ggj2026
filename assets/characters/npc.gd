@@ -29,12 +29,14 @@ func set_mask(newMask: Mask) -> void:
 		print(mask.position)
 
 func select():
-	var material = mesh.material_overlay as StandardMaterial3D
-	material.grow_amount = 0.02
+	pass
+	#var material = mesh.material_overlay as StandardMaterial3D
+	#material.grow_amount = 0.02
 
 func deselect():
-	var material = mesh.material_overlay as StandardMaterial3D
-	material.grow_amount = 0.0
+	pass
+	#var material = mesh.material_overlay as StandardMaterial3D
+	#material.grow_amount = 0.0
 
 func toggle_select():
 	if is_selected():
