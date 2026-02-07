@@ -134,7 +134,7 @@ shape = SubResource("ConcavePolygonShape3D_6diyo")
 [node name="SpotLight3D" type="SpotLight3D" parent="." unique_id=1260282145]
 transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 12.05916, -3.2220208e-07)
 light_color = Color(0.9947962, 0.9765807, 0.7165069, 1)
-light_energy = 16.0
+light_energy = 6.0
 light_size = 0.028
 light_specular = 0.0
 light_bake_mode = 1
@@ -244,19 +244,21 @@ shadow_enabled = true
 
 [node name="SpotLight3D2" type="SpotLight3D" parent="." unique_id=1477478783]
 transform = Transform3D(-0.26615596, -0.8481689, -0.45800722, -0.57641745, 0.52087617, -0.6296277, 0.77259564, 0.09642416, -0.6275336, -6.7424655, 1.5549684, 6.7342625)
+light_color = Color(1, 1, 0.92941177, 1)
 light_energy = 3.0
 light_bake_mode = 1
 spot_range = 7.7138715
 
 [node name="SpotLight3D3" type="SpotLight3D" parent="." unique_id=161333971]
 transform = Transform3D(-0.79127467, -0.16340479, 0.58922255, -0.5764174, 0.5208761, -0.62962765, -0.20402783, -0.8378465, -0.50634545, 7.4314084, 1.7826834, 6.848487)
+light_color = Color(1, 1, 0.95686275, 1)
 light_energy = 3.0
 light_bake_mode = 1
 spot_range = 7.7138715
 
 [node name="Spot_Stagelight" type="SpotLight3D" parent="." unique_id=1908492607]
 transform = Transform3D(1, 0, 0, 0, -0.12940131, 0.99159235, 0, -0.99159235, -0.12940131, 3.1938815, 5.851315, 7.227174)
-light_energy = 1.5
+light_color = Color(1, 1, 0.8627451, 1)
 light_bake_mode = 1
 spot_range = 5.549967
 spot_attenuation = 0.25
@@ -264,7 +266,7 @@ spot_angle = 16.552202
 
 [node name="Spot_Stagelight2" type="SpotLight3D" parent="." unique_id=2111490798]
 transform = Transform3D(1, 0, 0, 0, -0.12940131, 0.99159235, 0, -0.99159235, -0.12940131, 0.93920135, 5.851315, 7.227174)
-light_energy = 1.5
+light_color = Color(1, 1, 0.8901961, 1)
 light_bake_mode = 1
 spot_range = 5.549967
 spot_attenuation = 0.26
@@ -272,15 +274,15 @@ spot_angle = 16.552202
 
 [node name="Spot_Stagelight3" type="SpotLight3D" parent="." unique_id=462496020]
 transform = Transform3D(1, 0, 0, 0, -0.12940131, 0.99159235, 0, -0.99159235, -0.12940131, -1.2831608, 5.851315, 7.227174)
-light_energy = 1.5
+light_color = Color(1, 1, 0.8784314, 1)
 light_bake_mode = 1
 spot_range = 5.549967
 spot_attenuation = 0.27
 spot_angle = 16.552202
 
 [node name="Spot_Stagelight4" type="SpotLight3D" parent="." unique_id=1833395788]
-transform = Transform3D(1, 0, 0, 0, -0.12940131, 0.99159235, 0, -0.99159235, -0.12940131, -3.5650365, 5.851315, 7.227174)
-light_energy = 1.5
+transform = Transform3D(0.9999947, 0.00042233482, -0.0032363194, 0.0032637597, -0.12940061, 0.99158704, 0, -0.9915923, -0.1294013, -3.5650365, 5.851315, 7.227174)
+light_color = Color(1, 1, 0.85490197, 1)
 light_bake_mode = 1
 spot_range = 6.0
 spot_attenuation = 0.26
@@ -288,6 +290,7 @@ spot_angle = 16.552202
 
 [node name="SpotLight3D4" type="SpotLight3D" parent="." unique_id=170987576]
 transform = Transform3D(-0.8542683, 0, 0.5198323, -0.4529207, 0.49078214, -0.7443089, -0.25512442, -0.87128234, -0.41925964, -7.283698, 1.6479473, -7.9573517)
+light_color = Color(1, 0.9882353, 0.9019608, 1)
 light_energy = 2.782
 light_bake_mode = 1
 shadow_enabled = true
