@@ -282,6 +282,7 @@ spot_angle = 16.552202
 transform = Transform3D(1, 0, 0, 0, -0.12940131, 0.99159235, 0, -0.99159235, -0.12940131, -1.2831608, 5.851315, 7.227174)
 light_color = Color(1, 1, 0.8784314, 1)
 light_bake_mode = 1
+shadow_enabled = true
 spot_range = 5.549967
 spot_attenuation = 0.27
 spot_angle = 16.552202
