@@ -20,6 +20,7 @@
 [ext_resource type="Material" uid="uid://numgxl10bfsd" path="res://assets/characters/masks/wolf/wolf_red_material.tres" id="10_gmarq"]
 [ext_resource type="ArrayMesh" uid="uid://ot63stf0orm8" path="res://assets/characters/victim/victim_mesh.tres" id="11_28rm5"]
 [ext_resource type="Material" uid="uid://by3jdt2yajfmk" path="res://assets/characters/victim/victim_material.tres" id="12_bncxc"]
+[ext_resource type="Material" uid="uid://dt7ajpw2tcwvq" path="res://assets/materials/outline.tres" id="12_gmj0w"]
 [ext_resource type="Material" uid="uid://c4y0kgqqsgi4s" path="res://assets/characters/masks/wolf/wolf_yellow_material.tres" id="18_28rm5"]
 [ext_resource type="Material" uid="uid://chm0aw2c5lfx0" path="res://assets/characters/masks/coyote/coyote_green_material.tres" id="20_6diyo"]
 
@@ -38,84 +39,98 @@ transparency_curve = ExtResource("10_bncxc")
 
 [node name="NpcWoman" parent="Guests" unique_id=1322256327 instance=ExtResource("3_kc2v0")]
 transform = Transform3D(0.9580229, 0, 0.28669176, 0, 1, 0, -0.28669176, 0, 0.9580229, -0.6073333, 0.576488, -1.5248299)
+outline_material = ExtResource("12_gmj0w")
 
 [node name="MaskCoyote" parent="Guests/NpcWoman" unique_id=838938900 instance=ExtResource("4_r8kyd")]
 material = ExtResource("5_grs0h")
 
 [node name="NpcWoman2" parent="Guests" unique_id=1036776776 instance=ExtResource("3_kc2v0")]
 transform = Transform3D(0.6696233, 0, 0.7427008, 0, 1, 0, -0.7427008, 0, 0.6696233, 3.6295788, 0.576488, -3.3955755)
+outline_material = ExtResource("12_gmj0w")
 
 [node name="MaskBrown" parent="Guests/NpcWoman2" unique_id=173058342 instance=ExtResource("7_6e674")]
 material = ExtResource("8_fmc86")
 
-[node name="NpcMan" parent="Guests" unique_id=1245079323 instance=ExtResource("6_qi5g4")]
+[node name="NpcMan" parent="Guests" unique_id=1170297382 instance=ExtResource("6_qi5g4")]
 transform = Transform3D(-0.19392616, 0, 0.98101616, 0, 1, 0, -0.98101616, 0, -0.19392616, -1.5825374, 0.6009884, 0.5800942)
+outline_material = ExtResource("12_gmj0w")
 
 [node name="MaskBrown" parent="Guests/NpcMan" unique_id=1589121920 instance=ExtResource("7_6e674")]
 material = ExtResource("8_fmc86")
 
-[node name="NpcMan2" parent="Guests" unique_id=261327225 instance=ExtResource("6_qi5g4")]
+[node name="NpcMan2" parent="Guests" unique_id=1538094359 instance=ExtResource("6_qi5g4")]
 transform = Transform3D(-0.9972721, 0, 0.07381271, 0, 1, 0, -0.07381271, 0, -0.9972721, -0.416, 0.6, 1.266)
+outline_material = ExtResource("12_gmj0w")
 
 [node name="MaskWolf" parent="Guests/NpcMan2" unique_id=562816906 instance=ExtResource("9_c3k6u")]
 material = ExtResource("10_gmarq")
 
 [node name="NewArrivals1" parent="Guests" unique_id=1334281488 instance=ExtResource("3_kc2v0")]
 transform = Transform3D(0.96384007, 0, 0.26648146, 0, 1, 0, -0.26648146, 0, 0.96384007, -0.19445205, 1.0277526, -5.810175)
+outline_material = ExtResource("12_gmj0w")
 
 [node name="MaskWolf" parent="Guests/NewArrivals1" unique_id=40139601 instance=ExtResource("9_c3k6u")]
 material = ExtResource("18_28rm5")
 
-[node name="NewArrivals2" parent="Guests" unique_id=2036012801 instance=ExtResource("6_qi5g4")]
+[node name="NewArrivals2" parent="Guests" unique_id=283220310 instance=ExtResource("6_qi5g4")]
 transform = Transform3D(0.9059608, 0, -0.42336157, 0, 1, 0, 0.42336157, 0, 0.9059608, 1.0089271, 0.84550846, -5.5234885)
+outline_material = ExtResource("12_gmj0w")
 
 [node name="MaskWolf" parent="Guests/NewArrivals2" unique_id=155213677 instance=ExtResource("9_c3k6u")]
 material = ExtResource("18_28rm5")
 
 [node name="NewArrivals0" parent="Guests" unique_id=1741613956 instance=ExtResource("3_kc2v0")]
 transform = Transform3D(0.9175604, 0, -0.39759633, 0, 1, 0, 0.39759633, 0, 0.9175604, 0.1515994, 0.5685029, -4.117729)
+outline_material = ExtResource("12_gmj0w")
 
 [node name="MaskWolf" parent="Guests/NewArrivals0" unique_id=1798382740 instance=ExtResource("9_c3k6u")]
 material = ExtResource("18_28rm5")
 
-[node name="NewArrivals3" parent="Guests" unique_id=442474659 instance=ExtResource("6_qi5g4")]
+[node name="NewArrivals3" parent="Guests" unique_id=975716083 instance=ExtResource("6_qi5g4")]
 transform = Transform3D(0.9517766, 0, 0.3067919, 0, 1, 0, -0.3067919, 0, 0.9517766, -0.99842787, 0.5997124, -4.4628706)
+outline_material = ExtResource("12_gmj0w")
 
 [node name="MaskWolf" parent="Guests/NewArrivals3" unique_id=1979416910 instance=ExtResource("9_c3k6u")]
 material = ExtResource("18_28rm5")
 
-[node name="NewArrivals4" parent="Guests" unique_id=1505384630 instance=ExtResource("6_qi5g4")]
+[node name="NewArrivals4" parent="Guests" unique_id=2090486262 instance=ExtResource("6_qi5g4")]
 transform = Transform3D(0.65368474, 0, 0.7567669, 0, 1, 0, -0.7567669, 0, 0.65368474, -2.2469504, 0.5997124, -3.5664656)
+outline_material = ExtResource("12_gmj0w")
 
 [node name="MaskWolf" parent="Guests/NewArrivals4" unique_id=1297459477 instance=ExtResource("9_c3k6u")]
 material = ExtResource("18_28rm5")
 
-[node name="Lover1" parent="Guests" unique_id=370660193 instance=ExtResource("6_qi5g4")]
+[node name="Lover1" parent="Guests" unique_id=1145381949 instance=ExtResource("6_qi5g4")]
 transform = Transform3D(0.7616061, 0, 0.6480402, 0, 1, 0, -0.6480402, 0, 0.7616061, -5.7143683, 0.5997124, 1.783592)
+outline_material = ExtResource("12_gmj0w")
 
 [node name="MaskCoyote" parent="Guests/Lover1" unique_id=1655024520 instance=ExtResource("4_r8kyd")]
 material = ExtResource("20_6diyo")
 
 [node name="Lover2" parent="Guests" unique_id=1210741620 instance=ExtResource("3_kc2v0")]
 transform = Transform3D(-0.43295133, 0, -0.9014173, 0, 1, 0, 0.9014173, 0, -0.43295133, -4.5660334, 0.576488, 2.2373033)
+outline_material = ExtResource("12_gmj0w")
 
 [node name="MaskCoyote" parent="Guests/Lover2" unique_id=2043420979 instance=ExtResource("4_r8kyd")]
 material = ExtResource("20_6diyo")
 
 [node name="NewArrivals5" parent="Guests" unique_id=732274222 instance=ExtResource("3_kc2v0")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.0857517, 1.0144744, -6.2620416)
+outline_material = ExtResource("12_gmj0w")
 
 [node name="MaskWolf" parent="Guests/NewArrivals5" unique_id=1527548223 instance=ExtResource("9_c3k6u")]
 material = ExtResource("18_28rm5")
 
 [node name="NewArrivals6" parent="Guests" unique_id=714006210 instance=ExtResource("3_kc2v0")]
 transform = Transform3D(0.66465676, 0, -0.7471489, 0, 1, 0, 0.7471489, 0, 0.66465676, 1.1126821, 0.61834264, -4.0620594)
+outline_material = ExtResource("12_gmj0w")
 
 [node name="MaskWolf" parent="Guests/NewArrivals6" unique_id=552117389 instance=ExtResource("9_c3k6u")]
 material = ExtResource("18_28rm5")
 
-[node name="NewArrivals7" parent="Guests" unique_id=1303126843 instance=ExtResource("6_qi5g4")]
+[node name="NewArrivals7" parent="Guests" unique_id=900359950 instance=ExtResource("6_qi5g4")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.9253504, 1.2254786, -7.456639)
+outline_material = ExtResource("12_gmj0w")
 
 [node name="MaskWolf" parent="Guests/NewArrivals7" unique_id=434951575 instance=ExtResource("9_c3k6u")]
 material = ExtResource("18_28rm5")

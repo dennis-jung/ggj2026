@@ -1,0 +1,5 @@
+[gd_scene format=3 uid="uid://d3u34d7jmtmn2"]
+
+[ext_resource type="PackedScene" uid="uid://bjxibki6nqgtk" path="res://blender/Lady.blend" id="1_pugy8"]
+
+[node name="Lady2" unique_id=1668504597 instance=ExtResource("1_pugy8")]

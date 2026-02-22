@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://xdmm7egms4uv" path="res://addons/sprite_mesh/sprite_mesh_instance.gd" id="2_sjfic"]
 [ext_resource type="Script" uid="uid://onnxwjckopnl" path="res://addons/sprite_mesh/sprite_mesh.gd" id="3_2jd7x"]
-[ext_resource type="Texture2D" uid="uid://c1vf065544vwr" path="res://assets/characters/lady_wolf/Lady_back.png" id="4_vfkow"]
+[ext_resource type="Texture2D" uid="uid://db2tsftbxvc2c" path="res://assets/characters/lady_wolf/Lady_back.png" id="4_vfkow"]
 [ext_resource type="Texture2D" uid="uid://c1qbdmd4ayibv" path="res://assets/characters/lady_wolf/Lady_front.png" id="8_opvba"]
 [ext_resource type="ArrayMesh" uid="uid://bui27yq5mktvb" path="res://assets/characters/lady_wolf/lady_wolf_front_mesh.tres" id="9_ovhgs"]
 [ext_resource type="Material" uid="uid://dgmo1b0piunwc" path="res://assets/characters/lady_wolf/lady_wolf_front_material.tres" id="10_7lb6g"]

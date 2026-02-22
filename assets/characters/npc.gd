@@ -1,12 +1,17 @@
 extends StaticBody3D
 class_name Npc
 
-@onready var mesh : Node3D = $Lady2
+@export var outline_material: Material
+
+@onready var model_node: Node3D = $Model
 @onready var maskAttachmentPoint: Marker3D = $MaskPosition
+
+var mesh : MeshInstance3D
 
 var mask: Mask
 
 func _ready() -> void:
+	mesh = model_node.find_children("", "MeshInstance3D")[0]
 	check_mask_as_child()
 
 func check_mask_as_child() -> void:
@@ -29,14 +34,10 @@ func set_mask(newMask: Mask) -> void:
 		print(mask.position)
 
 func select():
-	pass
-	#var material = mesh.material_overlay as StandardMaterial3D
-	#material.grow_amount = 0.02
+	mesh.material_overlay = outline_material
 
 func deselect():
-	pass
-	#var material = mesh.material_overlay as StandardMaterial3D
-	#material.grow_amount = 0.0
+	mesh.material_overlay = null
 
 func toggle_select():
 	if is_selected():
