@@ -4,20 +4,20 @@
 
 [node name="Ballroom" unique_id=1303085288 instance=ExtResource("1_rju0o")]
 
-[node name="Wall03" parent="." index="0" unique_id=430035542]
+[node name="Wall03" parent="." index="0" unique_id=1246564008]
 visible = false
 
-[node name="Wall02" parent="." index="1" unique_id=982825572]
+[node name="Wall02" parent="." index="1" unique_id=1098423493]
 visible = false
 
-[node name="Wall01" parent="." index="2" unique_id=1822101038]
+[node name="Wall01" parent="." index="2" unique_id=726239357]
 visible = false
 
-[node name="Wall00" parent="." index="3" unique_id=1913791417]
+[node name="Wall00" parent="." index="3" unique_id=677848674]
 visible = false
 
-[node name="Bottle" parent="." index="42" unique_id=1666766886]
+[node name="Bottle" parent="." index="42" unique_id=2012706751]
 transform = Transform3D(0.24754256, 0, 0, 0, 0, -0.24754256, 0, 0.24754256, 0, 8.559731, 1.7745936, -6.3010736)
 
-[node name="Bottle_012" parent="." index="54" unique_id=1217955094]
+[node name="Bottle_012" parent="." index="54" unique_id=1549010177]
 transform = Transform3D(0.24754256, 0, 0, 0, 0, -0.24754256, 0, 0.24754256, 0, 6.4433203, 1.6194003, -1.8466544)

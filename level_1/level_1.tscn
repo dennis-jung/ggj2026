@@ -246,13 +246,20 @@ light_bake_mode = 1
 shadow_enabled = true
 
 [node name="OmniLight3D11" type="OmniLight3D" parent="." unique_id=234105600]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.2841043, 2.2438536, -1.5580236)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.292465, 2.2567122, -1.5403289)
 light_color = Color(0.9530421, 0.81358504, 0.6464887, 1)
-light_energy = 0.1
+light_energy = 0.259
 light_indirect_energy = 0.2
 light_volumetric_fog_energy = 0.0
+light_size = 0.028
 light_bake_mode = 1
 shadow_enabled = true
+shadow_blur = 1.693
+distance_fade_begin = 5.0
+distance_fade_shadow = 5.0
+distance_fade_length = 5.0
+omni_range = 2.0
+omni_shadow_mode = 0
 
 [node name="OmniLight3D3" type="OmniLight3D" parent="." unique_id=117432055]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.8497226, 1.7552943, 0.31203794)
